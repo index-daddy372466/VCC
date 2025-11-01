@@ -1,0 +1,44 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/* background  colors */
+:root{
+    --bg-primary:lightblue;
+    --bg-secondary:gold;
+    --bg-tertiary:#f00;
+    --bg-tint:#fff;
+    --bg-shade:#000;
+}
+
+body{
+    background-color:var(--bg-primary);
+    height:100vh;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main{
+    border:2px solid rgb(255, 200, 0);
+    height:100%;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer,header{
+    height:75px;
+    border:2px solid red;
+    width:100%;
+}
+footer{
+    position: absolute;
+    bottom:0;
+}
