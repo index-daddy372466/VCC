@@ -39,3 +39,10 @@ Navigation placement | Navigation Hamburger menu (View on mobile device)
 
 ___________
 Click <a href="https://index-daddy372466.github.io/VCC/">here</a> to access your project!
+
+
+### 2025.11.06
+
+## Slogan
+
+"Empowering individuals with disabilities to discover their strengths, build meaningful careers, and create lasting value in the workplace."`
