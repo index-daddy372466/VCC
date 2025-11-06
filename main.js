@@ -1,14 +1,14 @@
 // general variables
 const mobile_limit = 1010;
+
+/* -------------------------------- Hamburger Menu --------------------------------  */
+
 // hamburger menu
 let hamburger = document.getElementById('hamburger-container')
 let hamburger_options = ['rotate','disappear']
 
-
 // click hamburger menu
 hamburger.addEventListener('click',handleHamburgerMenu) 
-
-
 
 // handle hamburger menu
 function handleHamburgerMenu(e) { 
@@ -44,3 +44,5 @@ function handleHamburgerMenu(e) {
 
     }
 }
+
+/* -------------------------------- Hamburger Menu --------------------------------  */

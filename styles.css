@@ -49,11 +49,7 @@ footer,header{
     border:2px solid red;
     width:100%;
 }
-footer {
-    /* position:absolute; */
-    /* left:0;
-    bottom:0; */
-}
+
 /* ---------------- header/navigation ---------------- */
 #nav{
     width:75%;
@@ -126,10 +122,8 @@ footer {
 
 
 /* ---------------- main - rows ---------------- */
-
-
-
 /* ---------------- main - rows ---------------- */
+
 
 /* media query portrait mobile (width) */
 @media screen and (max-width:1010px) {
@@ -196,3 +190,5 @@ footer {
     font-size:11pt;
 }
 }
+/* media query portrait mobile (width) */
+
