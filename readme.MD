@@ -21,17 +21,17 @@ Navigation placement | Navigation Hamburger menu (View on mobile device)
 ## Proof of Development
 <div>
 <h3>Desktop</h3>
-<img src="../media/info/vcc_desktop_2025.11.05.png" />
+<img src="./media/info/vcc_desktop_2025.11.05.png" />
 </div>
 <div>
 <h3>Tablet</h3>
-<img src="../media/info/vcc_ipad_2025.11.05.png" />
+<img src="./media/info/vcc_ipad_2025.11.05.png" />
 </div>
 <div>
 <h3>Mobile Landscape</h3>
-<img src="../media/info/vcc_landscape_mobile_2025.11.05.png" />
+<img src="./media/info/vcc_landscape_mobile_2025.11.05.png" />
 </div>
 <div>
 <h3>Mobile Portrait</h3>
-<img src="../media/info/vcc_portrait_mobile_2025.11.05.png" />
+<img src="./media/info/vcc_portrait_mobile_2025.11.05.png" />
 </div>
