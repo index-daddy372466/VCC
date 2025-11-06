@@ -45,4 +45,4 @@ Click <a href="https://index-daddy372466.github.io/VCC/">here</a> to access your
 
 ## Slogan
 
-"Empowering individuals with disabilities to discover their strengths, build meaningful careers, and create lasting value in the workplace."`
+"Empowering individuals with disabilities to discover their strengths, build meaningful careers, and create lasting value in the workplace."
