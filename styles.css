@@ -50,9 +50,9 @@ footer,header{
     width:100%;
 }
 footer {
-    position:absolute;
-    left:0;
-    bottom:0;
+    /* position:absolute; */
+    /* left:0;
+    bottom:0; */
 }
 /* ---------------- header/navigation ---------------- */
 #nav{
@@ -133,6 +133,9 @@ footer {
 
 /* media query portrait mobile (width) */
 @media screen and (max-width:1010px) {
+    #logo-link>h1,#logo-link>h2{
+        font-size:16pt;
+    }
     body {
         padding:0 .5rem;
     }
@@ -187,4 +190,9 @@ footer {
     .s3-rotate{
         transform:translate(0,-10px) rotate(45deg);
     }
+
+    .slogan-actual-top,
+.slogan-actual-bottom{
+    font-size:11pt;
+}
 }
