@@ -8,13 +8,9 @@ let header = document.querySelector('header')
 // click hamburger menu
 hamburger.addEventListener('click',handleHamburgerMenu) 
 
-
-
 // handle hamburger menu
 function handleHamburgerMenu(e) { 
-    let hamburger_children = [...e.currentTarget.children]
-    console.log(e.target)
-    console.log(hamburger_children)
+    let hamburger_children = [...hamburger.children] || [...e.currentTarget.children]
     if(document.body.clientWidth < mobile_limit) {
         let children = [...hamburger_children]
         console.log(children)
@@ -43,11 +39,23 @@ function handleHamburgerMenu(e) {
         }
         if(children[1].classList.contains('s2-disappear')){
             showMobileNav(mobile_nav)
+            hamburger_children.map(child => child.classList.remove('disabled'))
+            hamburger_children.map(child => child.classList.add('enabled'))
 
         } else {
             hideMobileNav(mobile_nav)
+            hamburger_children.map(child => child.classList.remove('enabled'))
+            hamburger_children.map(child => child.classList.add('disabled'))
         }
     }
+}
+
+// click on a navitem in hamburger menu
+if(document.body.clientWidth < 1010){
+    let nav_children = [...mobile_nav.children]
+    nav_children.map(child => {
+        child.onclick = () => handleHamburgerMenu()
+    })
 }
 
 function hideMobileNav(nav,bool){
@@ -63,8 +71,6 @@ function showMobileNav(nav,bool){
 //     document.getElementById('problem').classList.add('slide-section')
 // },1200)
     document.getElementById('problem').classList.remove('appear-section')
-
-
 
 window.onscroll = handleScroll
 let hr = document.getElementById('hr-primary')
@@ -84,7 +90,6 @@ function handleScroll() {
 
     
 }
-
 
 function handleMobileNav(Y,header,nav){
     // if scroll Y is greater than scrollTop + 100
