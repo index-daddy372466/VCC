@@ -312,7 +312,7 @@ footer{
         top:unset;
         left:unset;
         top:80px;
-        right:0 !important;
+        right:10px !important;
         /* border-radius: 20px 0 0 20px; */
         
         height:260px;
@@ -389,24 +389,28 @@ footer{
 
     .learn-more-config{
         right:unset;
-        top: 250px;
-        bottom:unset;
+        bottom:175px;
         left:25%;
     }
+    #home {
+        justify-content: start;
+        align-items:end;
+    }
     #cover-phrase{
-        text-align:center;
-        font-size:21pt !important;
+        text-align:start;
+        font-size:18pt !important;
         margin-bottom:3rem;
     }
     #cover-phrase-container{
         width:100%;
-        margin-bottom:unset
+        margin-bottom:unset;
+        margin-top:2.25rem;
     }
     #img-pro{
         height:175px;
         width:135px;
         transform:scale(.90);
-        top:45px;
+        top:30%;
 
     }
 }
