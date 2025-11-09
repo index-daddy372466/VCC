@@ -1,0 +1,2 @@
+## font
+For a counseling website, use clean, readable sans-serif fonts like Open Sans or Lato for body text, and pair them with a slightly more refined serif font like Playfair Display or Merriweather for headings to convey professionalism and trust. A sans-serif is also a good, modern choice for the entire site, such as Helvetica or Arial, as they are highly legible on screens. 
