@@ -5,6 +5,16 @@
     list-style: none;
     text-decoration: none;
 }
+html {
+    scroll-behavior: smooth;
+}
+#hr-primary {
+    background:rgb(125, 237, 14);
+    height: 5px;
+    width:100%;
+    position:fixed;
+    bottom:0;
+}
 
 @font-face {
     font-family: 'Merriweather';
@@ -34,6 +44,7 @@
 :root {
     --font-header:'Merriweather',Arial, Helvetica, sans-serif;
     --font-header-italic:'Merriweather-italic', Arial, Helvetica, sans-serif !important;
+    --font-secondary:Arial, Helvetica, sans-serif;
 }
 
 body{
@@ -43,8 +54,8 @@ body{
     display:flex;
     flex-direction: column;
     align-items: center;
-    scroll-behavior: smooth;
     justify-content: center;
+    scroll-behavior: smooth;
 }
 
 main{
@@ -71,7 +82,9 @@ main{
     margin-top:.95rem;
     opacity:0;
 }
-
+.hide-element{
+    display:none !important;
+}
 .appear-section {
   opacity:1;
 }
@@ -83,6 +96,7 @@ main{
     flex-direction: row;
     align-items: end;
     justify-content: end;
+    padding:1rem;
 }
 #cover-phrase{
     color:#fff;
@@ -106,16 +120,16 @@ main{
 }
 
 footer,header{
-    height:95px;
+    max-height:100%;
     border:2px solid red;
     width:100%;
 }
-
-footer {
-    /* position:absolute; */
-    /* left:0;
-    bottom:0; */
+.fixed-position{
+    position:fixed;
+    z-index: 999;
 }
+
+
 /* ---------------- header/navigation ---------------- */
 #nav{
     width:75%;
@@ -129,6 +143,9 @@ footer {
     padding-right:.25rem;
     right:0;
     top:0;
+}
+#nav-mobile {
+    display:none;
 }
 #hamburger-container{
     display:none;
@@ -206,6 +223,37 @@ footer {
 
     #nav{
         display:none;
+    }
+    #nav-mobile{
+        display:block;
+        width:100%;
+        border:2px solid lime;
+    }
+    #nav-mobile>#nav-mobile-list-container{
+        display:flex;
+        flex-direction:column;
+        width:100%;
+        border:2px solid yellow;
+        gap:2px;
+    }
+
+    .nav-mobile-list-link {
+        transition:.25s;
+        width:100%;
+        text-align: center;
+        font-family:var(--font-secondary);
+        font-size:14pt;
+        background:var(--bg-shade);
+        color:var(--col-secondary);
+        padding:1.25rem 0;
+    }
+    .squish-link {
+        padding:.75rem 0 !important;
+    }
+    .nav-mobile-list-link:hover{
+        cursor:pointer;
+        background:var(--bg-tint);
+        color:var(--col-primary);
     }
     #img-pro{
         top:unset;
