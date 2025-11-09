@@ -44,3 +44,31 @@ function handleHamburgerMenu(e) {
 
     }
 }
+
+
+
+// setTimeout(()=>{
+//     document.getElementById('problem').classList.add('slide-section')
+// },1200)
+    document.getElementById('problem').classList.remove('appear-section')
+
+
+
+window.onscroll = handleScroll
+
+let sections =  [...document.querySelectorAll('.section-gen')]
+function handleScroll(e) {
+    let X = window.scrollX, Y = window.scrollY;
+    
+
+    // map sections
+    sections.filter((_,i)=>i>0).map(section => {
+        let sectionTop = section.getBoundingClientRect().y, sectionBottom = sectionTop + section.clientHeight;
+
+        if(Y < sectionTop) {
+            section.classList.remove('appear-section')
+        } else {
+            section.classList.add('appear-section')
+        }
+    })
+}

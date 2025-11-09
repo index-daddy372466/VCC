@@ -5,11 +5,15 @@
     radial-gradient(at 0% 0%, #FF69B4 0px, transparent 50%),
     radial-gradient(at 100% 100%, #FFD700 0px, transparent 50%), 
     linear-gradient(to bottom right, #FF69B4, #53e4e2);
-  height: 100vh;
   width: 100%;
 }
 
 
+.background-overlay {
+  background:#818080;
+  background-blend-mode: multiply;
+
+}
 
 .teamwork{
   /* background-image:url('./media/concept/teamwork.png'); */
@@ -17,4 +21,24 @@
   background-size:cover;
   background-repeat:no-repeat;
   background-position:center;
+
 }
+.splash{
+  /* background-image:url('./media/concept/teamwork.png'); */
+  background-image:url('./media/concept/splash.png');
+  background-size:contain;
+  background-repeat:no-repeat;
+  background-position:center;
+}
+
+
+/* concept backgrounds */
+
+/* problem */
+.problem {
+  background-image:url('./media/concept/puzzle.avif');
+  background-size:cover;
+  background-repeat:no-repeat;
+  transition:.25s;
+}
+
