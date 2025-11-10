@@ -322,7 +322,8 @@ footer{
         font-size:14pt;
         background:var(--bg-shade);
         color:var(--col-secondary);
-        padding:1.25rem 0;
+        padding:16px 0;
+        color:silver !important;
     }
     .squish-link {
         padding:.75rem 0 !important;
@@ -447,5 +448,8 @@ footer{
      #img-pro{
         height:200px;
         width:155px;
+    }
+    .nav-mobile-list-link {
+        padding:12px 0;
     }
 }   
