@@ -61,17 +61,18 @@ body{
 }
 #logo-link{
     display:flex;
-    align-items:end;
+    align-items:start;
     justify-content: start;
     transform:Scale(.88);
+    flex-direction: column;
 }
 #logo-link.underline{
     border-bottom:1px solid yellow;
 }
 #logo-link>img{
         margin-top:.5rem;
-        height:120px;
-        width:190px;
+        height:80px;
+        width:140px;
         /* box-shadow:0 5px 8px .014px var(--bg-secondary); */
     }
     #logo-link>em {
@@ -110,7 +111,7 @@ main{
     padding:0 .75rem;
     justify-content: end;
     opacity:1 !important;
-    margin-top:8.75rem;
+    margin-top:8rem;
 }
 .section-gen{
     transition:.5s;
@@ -308,7 +309,7 @@ footer{
     padding:0 .75rem;
     justify-content: end;
     opacity:1 !important;
-    margin-top:5.75rem;
+    margin-top:7.25rem;
 }
 #counsel {
     transform:translate(0,13.5px) !important;
@@ -316,6 +317,7 @@ footer{
     .target-link{
         display:none;
     }
+  
     #logo-link>img{
         height:67px;
         width:120px;
@@ -348,7 +350,7 @@ footer{
     #nav-mobile{
         display:block;
         width:100%;
-        top:90px;
+        top:110px;
         z-index:999;
     }
     .relative-nav{
@@ -471,6 +473,7 @@ footer{
     #home {
         justify-content: start;
         align-items:end;
+        margin-top:9.25rem !important;
     }
     #cover-phrase{
         text-align:start;
@@ -487,7 +490,14 @@ footer{
         width:168px;
         transform:scale(.90);
         top:30%;
-
+    }
+    #nav-mobile{
+        top:120.5px;
+    }
+    .fixed-nav{
+        position:fixed;
+        left:0;
+        top:105px !important;
     }
 }
 
@@ -497,6 +507,12 @@ footer{
         font-size:21pt !important;
         margin-bottom:3rem;
     }
+
+     #logo-link{
+        flex-direction: row;
+        align-items: end;
+        justify-content: start;
+    }
      #img-pro{
         height:155px;
         width:120px;
@@ -505,3 +521,15 @@ footer{
         padding:12px 0;
     }
 }   
+@media screen and (max-width: 390px) {
+
+#nav-mobile{
+        top:140.5px;
+    }
+    .fixed-nav{
+        position:fixed;
+        left:0;
+        top:140px !important;
+    }
+
+}
