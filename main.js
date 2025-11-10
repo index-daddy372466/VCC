@@ -4,6 +4,7 @@ const mobile_limit = 1010;
 let hamburger = document.getElementById('hamburger-container')
 let hamburger_options = ['rotate','disappear']
 let [nav,mobile_nav] = [document.getElementById('nav'),document.getElementById('nav-mobile')]
+let nav_children = [...nav.children[0].children].map(x=>x.children[0]) // article elements
 let header = document.querySelector('header')
 // click hamburger menu
 hamburger.addEventListener('click',handleHamburgerMenu) 
@@ -67,26 +68,47 @@ function showMobileNav(nav,bool){
     nav.classList.remove('hide-element')
 }
 
-// setTimeout(()=>{
-//     document.getElementById('problem').classList.add('slide-section')
-// },1200)
-    document.getElementById('problem').classList.remove('appear-section')
+document.getElementById('problem').classList.remove('appear-section')
 
 window.onscroll = handleScroll
 let hr = document.getElementById('hr-primary')
 let sections =  [...document.querySelectorAll('.section-gen')]
+let sections_gen = [...document.querySelectorAll('.section-gen-link')]
+let target_section
 function handleScroll() {
     let X = window.scrollX, Y = window.scrollY
     
     // map sections
-    sections.filter((_,i)=>i>0).map(section => {
+    sections.filter((_,p) => p > 0).map(section => {
         let sectionTop = section.getBoundingClientRect().y, sectionBottom = sectionTop + section.clientHeight;
         if(hr.getBoundingClientRect().y < sectionTop + 100) {
-            section.classList.remove('appear-section')
+            section.classList.remove('appear-section');
         } else {
             section.classList.add('appear-section')
         }
     })
+
+     for(let i = 0; i < sections_gen.length; i++){
+        nav_children[i].classList.remove('target-link') // remove target link from nav list items 
+
+        let sectionTop = sections_gen[i].getBoundingClientRect().y, sectionBottom = sectionTop + sections_gen[i].clientHeight;
+        if((hr.getBoundingClientRect().y > sectionTop) && hr.getBoundingClientRect().y < sectionBottom ||
+            (i==sections_gen.length - 1 && hr.getBoundingClientRect().y > sectionBottom)) {
+            target_section = sections_gen[i]
+            let nav_element = nav_children[i]
+            nav_element.classList.add('target-link')
+        }
+      
+     }
+
+    // if y > top
+    if(Y > document.body.scrollTop){
+        mobile_nav.classList.remove('relative-nav')
+        mobile_nav.classList.add('fixed-nav')
+    } else {
+        mobile_nav.classList.remove('fixed-nav')
+        mobile_nav.classList.add('relative-nav')
+    }
 
     
 }
@@ -100,5 +122,16 @@ function handleMobileNav(Y,header,nav){
     } else {
         header.classList.remove('fixed-position')
         nav.classList.remove('fixed-position')
+    }
+}
+
+
+// navigation - remove target (map) and assign target-link to clicked element
+for(let i = 0; i < nav_children.length; i++){
+    console.log(nav_children[i])
+    nav_children[i].onclick = e => {
+        const target = e.target || window || undefined
+        nav_children.map(child => child.classList.remove('target-link'));
+        target.classList.add('target-link')
     }
 }

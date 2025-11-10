@@ -196,6 +196,9 @@ footer{
     color:var(--col-secondary);
     font-weight:bold;
 }
+.target-link{
+    border-bottom:5px solid var(--bg-secondary);
+}
 /* ---------------- header/navigation ---------------- */
 
 
@@ -249,6 +252,9 @@ footer{
 
 /* media query portrait mobile (width) */
 @media screen and (max-width:1010px) {
+    .target-link{
+        display:none;
+    }
     #logo-link>h1,#logo-link>h2{
         font-size:16pt;
     }
@@ -279,15 +285,22 @@ footer{
     #nav-mobile{
         display:block;
         width:100%;
-        position:fixed;
         top:90px;
         z-index:999;
+    }
+    .relative-nav{
+        position:relative;
+    }
+    .fixed-nav{
+        position:fixed;
     }
     #nav-mobile>#nav-mobile-list-container{
         display:flex;
         flex-direction:column;
         width:100%;
-        gap:2px;
+        gap:1.25px;
+        background:#fff;
+
     }
 
     .nav-mobile-list-link {
@@ -314,9 +327,8 @@ footer{
         top:80px;
         right:10px !important;
         /* border-radius: 20px 0 0 20px; */
-        
-        height:260px;
-        width:192px;
+        height:268px;
+        width:205px;
         bordeR:8px solid var(--col-tertiary);
     }
 
