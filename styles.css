@@ -62,14 +62,23 @@ body{
     display:flex;
     align-items:end;
     justify-content: start;
-    transform:Scale(.88)
-    /* border:3px solid yellow; */
+    transform:Scale(.88);
+}
+#logo-link.underline{
+    border-bottom:1px solid yellow;
 }
 #logo-link>img{
         margin-top:.5rem;
-        height:120px;
-        width:190px;
+        height:150px;
+        width:220px;
+        /* box-shadow:0 5px 8px .014px var(--bg-secondary); */
     }
+    #logo-link>em {
+        font-size:21pt;
+        color:var(--col-subheader);
+        margin-left:.5rem;
+    }
+
     #counsel {
         transform:translate(0,3.5px) !important;
         height:60px !important;
@@ -228,6 +237,10 @@ footer{
     color:var(--col-secondary);
     font-weight:bold;
     font-size:14pt;
+}
+.nav-list-item>a[href="#deals"],.nav-list-item>a[href="#problem"]{
+    /* background:red !important; */
+    padding:0;
 }
 .target-link{
     border-bottom:5px solid var(--bg-secondary);
