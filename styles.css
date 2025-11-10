@@ -243,9 +243,12 @@ footer{
     font-weight:bold;
     font-size:14pt;
 }
-.nav-list-item>a[href="#deals"],.nav-list-item>a[href="#problem"]{
+#nav-mobile-list-container>a[href="#deals"],#nav-mobile-list-container>a[href="#problem"]{
     /* background:red !important; */
     padding:0;
+}
+.nav-mobile-list-item>a[href="#deals"],.nav-mobile-list-item>a[href="#problem"]{
+    background:yellow !important;
 }
 .target-link{
     border-bottom:5px solid var(--bg-secondary);
@@ -317,9 +320,12 @@ footer{
     transform:translate(0,13.5px) !important;
 }
     .target-link{
-        display:none;
+        /* color: var(--col-primary) !important; */
+        color: var(--col-tertiary) !important;
+        border-bottom:4.5px solid var(--bg-secondary);
+        /* background:var(--bg-tint) !important; */
     }
-  
+
     #logo-link>img{
         height:67px;
         width:120px;
@@ -367,7 +373,7 @@ footer{
         display:flex;
         flex-direction:column;
         width:100%;
-        gap:1.25px;
+        gap:.5px;
         background:#fff;
     }
 
@@ -380,7 +386,7 @@ footer{
         background:var(--bg-shade);
         color:var(--col-secondary);
         padding:16px 0;
-        color:silver !important;
+        color:silver;
     }
     .squish-link {
         padding:.75rem 0 !important;
@@ -523,7 +529,7 @@ footer{
     .nav-mobile-list-link {
         padding:12px 0;
     }
-}   
+}
 @media screen and (max-width: 390px) {
 
 #nav-mobile{

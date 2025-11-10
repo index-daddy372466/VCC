@@ -92,7 +92,7 @@ function handleScroll() {
 
      for(let i = 0; i < sections_gen.length; i++){
         nav_children[i].classList.remove('target-link') // remove target link from nav list items 
-        // mobile_nav_children[i].classList.remove('target-link')
+        if(mobile_nav_children[i])mobile_nav_children[i].classList.remove('target-link')
 
         let sectionTop = sections_gen[i].getBoundingClientRect().y, sectionBottom = sectionTop + sections_gen[i].clientHeight;
         if((hr.getBoundingClientRect().y > sectionTop) && hr.getBoundingClientRect().y < sectionBottom ||
@@ -114,6 +114,4 @@ function handleScroll() {
         mobile_nav.classList.remove('fixed-nav')
         mobile_nav.classList.add('relative-nav')
     }
-
-    
 }
