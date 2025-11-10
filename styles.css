@@ -69,8 +69,8 @@ body{
 }
 #logo-link>img{
         margin-top:.5rem;
-        height:150px;
-        width:220px;
+        height:120px;
+        width:190px;
         /* box-shadow:0 5px 8px .014px var(--bg-secondary); */
     }
     #logo-link>em {
@@ -109,7 +109,7 @@ main{
     padding:0 .75rem;
     justify-content: end;
     opacity:1 !important;
-    margin-top:9rem;
+    margin-top:8.75rem;
 }
 .section-gen{
     transition:.5s;
