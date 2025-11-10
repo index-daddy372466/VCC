@@ -124,14 +124,3 @@ function handleMobileNav(Y,header,nav){
         nav.classList.remove('fixed-position')
     }
 }
-
-
-// navigation - remove target (map) and assign target-link to clicked element
-for(let i = 0; i < nav_children.length; i++){
-    console.log(nav_children[i])
-    nav_children[i].onclick = e => {
-        const target = e.target || window || undefined
-        nav_children.map(child => child.classList.remove('target-link'));
-        target.classList.add('target-link')
-    }
-}
