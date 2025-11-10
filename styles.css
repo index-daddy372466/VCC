@@ -58,6 +58,17 @@ body{
     scroll-behavior: smooth;
 }
 
+.disable-highlight,
+.nav-mobile-list-link,
+.nav-list-item > a{
+      -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Standard syntax */
+}
+
 main{
     height:100%;
     width:100%;
@@ -120,14 +131,14 @@ main{
 }
 
 footer,header{
+    min-height:85px;
     max-height:100%;
     width:100%;
+    background:#000;
 }
 header{
-    min-height:85px;
     position:fixed;
     z-index:999;
-    background:#000;
 }
 footer{
     min-height:150px;
@@ -419,8 +430,8 @@ footer{
         margin-top:2.25rem;
     }
     #img-pro{
-        height:175px;
-        width:135px;
+        height:225px;
+        width:168px;
         transform:scale(.90);
         top:30%;
 
