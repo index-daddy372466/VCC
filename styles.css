@@ -509,18 +509,40 @@ footer{
         top:105px !important;
     }
 }
-
+/* landscape phone */
 @media screen and (max-width:1000px) and (max-height:500px){
         #cover-phrase{
         text-align:left;
         font-size:21pt !important;
         margin-bottom:3rem;
     }
+    #nav-mobile{
+        top:85.5px;
+    }
+    .fixed-nav {
+        top:78px !important;
+    } 
 
+    #home {
+        margin-top:6rem;
+    }
+    header {
+        min-height:70px !important;
+        max-height:70px !important;
+        height:70px !important;
+    }
      #logo-link{
         flex-direction: row;
         align-items: end;
         justify-content: start;
+        /* border:2px solid red; */
+    }
+    #logo-link>em{
+        font-size:16pt;
+    }
+    #logo-link>img{
+        height:50px;
+        width:80px;
     }
      #img-pro{
         height:155px;
