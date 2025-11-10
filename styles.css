@@ -169,6 +169,7 @@ footer,header{
 header{
     position:fixed;
     z-index:999;
+    left:0;
 }
 footer{
     min-height:150px;
@@ -353,6 +354,7 @@ footer{
     }
     .fixed-nav{
         position:fixed;
+        left:0;
     }
     #nav-mobile>#nav-mobile-list-container{
         display:flex;
@@ -360,7 +362,6 @@ footer{
         width:100%;
         gap:1.25px;
         background:#fff;
-
     }
 
     .nav-mobile-list-link {
