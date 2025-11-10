@@ -5,6 +5,8 @@ let hamburger = document.getElementById('hamburger-container')
 let hamburger_options = ['rotate','disappear']
 let [nav,mobile_nav] = [document.getElementById('nav'),document.getElementById('nav-mobile')]
 let nav_children = [...nav.children[0].children].map(x=>x.children[0]) // article elements
+let mobile_nav_children = [...mobile_nav.children[0].children].map(x=>x) // article elements
+console.log(mobile_nav_children)
 let header = document.querySelector('header')
 // click hamburger menu
 hamburger.addEventListener('click',handleHamburgerMenu) 
@@ -90,13 +92,16 @@ function handleScroll() {
 
      for(let i = 0; i < sections_gen.length; i++){
         nav_children[i].classList.remove('target-link') // remove target link from nav list items 
+        // mobile_nav_children[i].classList.remove('target-link')
 
         let sectionTop = sections_gen[i].getBoundingClientRect().y, sectionBottom = sectionTop + sections_gen[i].clientHeight;
         if((hr.getBoundingClientRect().y > sectionTop) && hr.getBoundingClientRect().y < sectionBottom ||
             (i==sections_gen.length - 1 && hr.getBoundingClientRect().y > sectionBottom)) {
             target_section = sections_gen[i]
             let nav_element = nav_children[i]
+            let mobile_nav_element = mobile_nav_children[i]
             nav_element.classList.add('target-link')
+            mobile_nav_element.classList.add('target-link')
         }
       
      }
@@ -111,16 +116,4 @@ function handleScroll() {
     }
 
     
-}
-
-function handleMobileNav(Y,header,nav){
-    // if scroll Y is greater than scrollTop + 100
-    if(Y > 100){
-        header.classList.add('fixed-position')
-        nav.classList.add('fixed-position')
-
-    } else {
-        header.classList.remove('fixed-position')
-        nav.classList.remove('fixed-position')
-    }
 }

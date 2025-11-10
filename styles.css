@@ -9,7 +9,9 @@ html {
     scroll-behavior: smooth;
 }
 #hr-primary {
-    background:rgb(125, 237, 14);
+    /* background:rgb(125, 237, 14); */
+    background:transparent;
+    pointer-events: none;
     height: 5px;
     width:100%;
     position:fixed;
@@ -352,6 +354,7 @@ footer{
         width:100%;
         top:110px;
         z-index:999;
+        border:2px solid var(--bg-tint)
     }
     .relative-nav{
         position:relative;
@@ -524,7 +527,7 @@ footer{
 @media screen and (max-width: 390px) {
 
 #nav-mobile{
-        top:140.5px;
+        top:143.5px;
     }
     .fixed-nav{
         position:fixed;
