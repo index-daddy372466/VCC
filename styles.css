@@ -206,7 +206,7 @@ footer{
     justify-content: end;
     padding-right:.25rem;
     right:0;
-    top:0;
+    bottom:8px;
 }
 #nav-mobile {
     display:none;
@@ -227,6 +227,7 @@ footer{
     font-family:var(--font-secondary);
     color:var(--col-secondary);
     font-weight:bold;
+    font-size:14pt;
 }
 .target-link{
     border-bottom:5px solid var(--bg-secondary);
@@ -354,7 +355,7 @@ footer{
         width:100%;
         text-align: center;
         font-family:var(--font-secondary);
-        font-size:14pt;
+        font-size:12pt;
         background:var(--bg-shade);
         color:var(--col-secondary);
         padding:16px 0;
