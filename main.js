@@ -119,10 +119,10 @@ function handleScroll() {
                     console.log(background_pos)
                     sections_gen[i].style.backgroundPosition = background_pos.x + "px";
             }
-            else if(/^#(faq|services)$/.test(nav_element.getAttribute('href'))){ 
-                starting--
-                sections_gen[i].style.backgroundPositionY = (starting*.49) + "px";
-            }
+            // else if(/^#(faq|services)$/.test(nav_element.getAttribute('href'))){ 
+            //     starting--
+            //     sections_gen[i].style.backgroundPositionY = (starting*.49) + "px";
+            // }
             else {
                 if(backgroundcounter >= 0) {
                     backgroundcounter--

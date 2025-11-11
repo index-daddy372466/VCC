@@ -58,12 +58,15 @@
   background-size:cover;
   background-repeat:no-repeat;
   background-position:center center;
+  background-attachment: fixed; /* Optional: keeps the background fixed during scroll */
+
 }
 .stones-rev {
   background-image:url('./media/concept/stones-rev.png');
   background-size:cover;
   background-repeat:no-repeat;
   background-position:center center;
+  background-attachment: fixed; /* Optional: keeps the background fixed during scroll */
 }
 
 .rocks {
