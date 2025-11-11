@@ -210,7 +210,7 @@ footer{
 
 /* ---------------- header/navigation ---------------- */
 #nav{
-    width:75%;
+    width:50%;
     height:75px;
     /* border:2px solid red; */
     position: absolute;
@@ -229,19 +229,21 @@ footer{
     display:none;
 }
 #nav > #nav-list-container{
+    width:100%;
     display:flex;
-    justify-content: center;
+    justify-content: end;
     align-items: end;
     padding: 0 0 .5rem 0;
+    /* border:2px solid red; */
 }
 .nav-list-item>a{
-    padding:.5rem 1.5rem;
+    padding:.5rem .55rem;
     margin-left:5px;
     background:transparent;
     font-family:var(--font-secondary);
     color:var(--col-secondary);
     font-weight:bold;
-    font-size:14pt;
+    font-size:12pt;
 }
 #nav-mobile-list-container>a[href="#deals"],#nav-mobile-list-container>a[href="#problem"]{
     /* background:red !important; */
@@ -485,6 +487,10 @@ footer{
     }
     .problem-col{
         width:98%;
+    }
+    .about-bg{
+        background-size:85%;
+        background-attachment:relative !important;
     }
     .learn-more-config{
         right:unset;

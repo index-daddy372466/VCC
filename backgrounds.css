@@ -39,6 +39,56 @@
   background-image:url('./media/concept/frustrated.png');
   background-size:cover;
   background-repeat:no-repeat;
-  background-position:-390px;
+  background-position:0;
+}
+.white-dress{
+  background-image:url('./media/concept/white-dress.png');
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:50%;
+}
+.bridge{
+  background-image:url('./media/concept/bridge.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:0px;
+}
+.stones{
+  background-image:url('./media/concept/stones.png');
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center center;
+}
+.stones-rev {
+  background-image:url('./media/concept/stones-rev.png');
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center center;
+}
+
+.rocks {
+  background-image:url('./media/concept/rocks.jpg');
+  background-color:#c0c0c0;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position: center center;
+  background-attachment: fixed; /* Optional: keeps the background fixed during scroll */
+}
+
+.bluesky {
+  background-image:url('./media/concept/bluesky.png');
+  background-color:unset !important;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position: center center;
+  background-attachment: fixed; /* Optional: keeps the background fixed during scroll */
+}
+.sundown {
+  background-image:url('./media/concept/sundown.jpg');
+  background-color:unset !important;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-attachment: fixed; /* Optional: keeps the background fixed during scroll */
 }
 

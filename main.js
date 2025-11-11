@@ -82,6 +82,8 @@ let background_pos = {x:undefined,y:undefined}
 let backgroundcounter = 0;
 
 let percentage = .77;
+let starting = 200;
+let about_bg = 'center end'
 // handle scroll
 function handleScroll() {
     let Y = window.scrollY
@@ -100,6 +102,7 @@ function handleScroll() {
         nav_children[i].classList.remove('target-link') // remove target link from nav list items 
         if(mobile_nav_children[i])mobile_nav_children[i].classList.remove('target-link')
 
+
         let sectionTop = sections_gen[i].getBoundingClientRect().y, sectionBottom = sectionTop + sections_gen[i].clientHeight;
         if((hr.getBoundingClientRect().y > sectionTop) && hr.getBoundingClientRect().y < sectionBottom ||
             (i==sections_gen.length - 1 && hr.getBoundingClientRect().y > sectionBottom)) {
@@ -107,22 +110,27 @@ function handleScroll() {
             let nav_element = nav_children[i]
             let mobile_nav_element = mobile_nav_children[i]
             nav_element.classList.add('target-link')
-            mobile_nav_element.classList.add('target-link')
+            mobile_nav_element.classList.add('target-link');
             
+            backgroundcounter = Y
             // problem container - manipulate background image 
             if(nav_element.getAttribute('href')==='#problem'){ 
-                    backgroundcounter = Y
                     background_pos.x = +(backgroundcounter*(percentage))*-1
                     console.log(background_pos)
-                    problemcontainer.style.backgroundPosition = background_pos.x + "px";
-            } else {
+                    sections_gen[i].style.backgroundPosition = background_pos.x + "px";
+            }
+            else if(/^#(faq|services)$/.test(nav_element.getAttribute('href'))){ 
+                starting--
+                sections_gen[i].style.backgroundPositionY = (starting*.49) + "px";
+            }
+            else {
                 if(backgroundcounter >= 0) {
                     backgroundcounter--
                 }
+               
+                starting = 200
             }
-            
         }
-      
      }
 
     // if y > top
