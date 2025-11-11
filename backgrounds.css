@@ -35,5 +35,10 @@
 /* concept backgrounds */
 
 
-
+.frustrated{
+  background-image:url('./media/concept/frustrated.png');
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:-390px;
+}
 

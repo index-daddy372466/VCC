@@ -462,6 +462,10 @@ footer{
         width:66%;
         margin-bottom:2.25rem;
      }
+     .problem-col{
+        background:#333333cb;
+        color:var(--col-secondary);
+    }
     #cover-phrase{
         text-align:start;
         font-size:31pt !important;
@@ -474,6 +478,14 @@ footer{
 
 @media screen and (max-width: 490px) {
 
+    #problem {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .problem-col{
+        width:98%;
+    }
     .learn-more-config{
         right:unset;
         bottom:175px;
@@ -564,3 +576,5 @@ footer{
     }
 
 }
+
+

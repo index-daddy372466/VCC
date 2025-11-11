@@ -11,6 +11,7 @@ let header = document.querySelector('header')
 // click hamburger menu
 hamburger.addEventListener('click',handleHamburgerMenu) 
 
+let problemcontainer = document.getElementById('problem')
 // handle hamburger menu
 function handleHamburgerMenu(e) { 
     let hamburger_children = [...hamburger.children] || [...e.currentTarget.children]
@@ -77,8 +78,13 @@ let hr = document.getElementById('hr-primary')
 let sections =  [...document.querySelectorAll('.section-gen')]
 let sections_gen = [...document.querySelectorAll('.section-gen-link')]
 let target_section
+let background_pos = {x:undefined,y:undefined}
+let backgroundcounter = 0;
+
+let percentage = .77;
+// handle scroll
 function handleScroll() {
-    let X = window.scrollX, Y = window.scrollY
+    let Y = window.scrollY
     
     // map sections
     sections.filter((_,p) => p > 0).map(section => {
@@ -102,6 +108,19 @@ function handleScroll() {
             let mobile_nav_element = mobile_nav_children[i]
             nav_element.classList.add('target-link')
             mobile_nav_element.classList.add('target-link')
+            
+            // problem container - manipulate background image 
+            if(nav_element.getAttribute('href')==='#problem'){ 
+                    backgroundcounter = Y
+                    background_pos.x = +(backgroundcounter*(percentage))*-1
+                    console.log(background_pos)
+                    problemcontainer.style.backgroundPosition = background_pos.x + "px";
+            } else {
+                if(backgroundcounter >= 0) {
+                    backgroundcounter--
+                }
+            }
+            
         }
       
      }
@@ -114,4 +133,8 @@ function handleScroll() {
         mobile_nav.classList.remove('fixed-nav')
         mobile_nav.classList.add('relative-nav')
     }
+
+
+    
+    
 }
