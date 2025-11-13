@@ -56,7 +56,7 @@ Click <a href="https://index-daddy372466.github.io/VCC/">here</a> to access your
 ## Instruction
 <img height=350 src="./media/info/vcc_problem_template.png" />
 
-1. Access the <a href="https://github.com/index-daddy372466/vcc">VCC Repository</a>
+1. Access the <a href="https://github.com/index-daddy372466/VCC/tree/certification">VCC Repository</a>
 2. <a style="text-decoration:none" href=https://github.com/index-daddy372466/VCC/blob/main/index.html><em style="border-bottom:.5px solid red;">click here</em></a> to access the main html file, <em>index.html</em>
 <img height=160 src="./media/info/editfile.png" />
 3. Edit file by clicking the pencil icon.
