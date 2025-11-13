@@ -6,3 +6,4 @@
 1. Collaborate with employers to create inclusive work environments. 
 1. Provide counseling and mental health support. 
 1. Coordinate with other service providers and advocate for clients' needs. 
+

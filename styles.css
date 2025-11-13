@@ -641,21 +641,28 @@ background:none !important;
         flex-direction: column;
         align-items: end;
     }
+    .section-subheader>h2{
+        font-size:22pt;
+    }
     .section-col{
-        width:80%;
+        width:90%;
     }
     .section-col>.description>p {
         text-align: left;
     }
-    .alone{
-        text-align:center;
+    .alone,.take-action{
         flex-direction: row;
-        justify-content: start;
         align-items: center;
-        gap:1rem;
+        gap:.6rem;
+    }
+    .alone{
+        justify-content: start;
+    }
+    .take-action{
+        justify-content: end;
     }
 }
-@media screen and (max-width: 490px) {
+@media screen and (max-width: 531px) {
 
     #certification{
     font-family: var(--font-header);

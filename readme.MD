@@ -1,5 +1,5 @@
 # VCC
-
+<!-- 
 Click <a href="https://index-daddy372466.github.io/VCC/">here</a> to access your project!
 ## Updates
 
@@ -45,4 +45,25 @@ Click <a href="https://index-daddy372466.github.io/VCC/">here</a> to access your
 
 ## Slogan
 
-"Empowering individuals with disabilities to discover their strengths, build meaningful careers, and create lasting value in the workplace."
+"Empowering individuals with disabilities to discover their strengths, build meaningful careers, and create lasting value in the workplace." -->
+
+
+## 2025.11.13 Updates
+
+1. Problem section 
+- text and subheaders added
+
+## Instruction
+<img height=350 src="./media/info/vcc_problem_template.png" />
+
+1. Access the <a href="https://github.com/index-daddy372466/vcc">VCC Repository</a>
+2. <a style="text-decoration:none" href=https://github.com/index-daddy372466/VCC/blob/main/index.html><em style="border-bottom:.5px solid red;">click here</em></a> to access the main html file, <em>index.html</em>
+<img height=160 src="./media/info/editfile.png" />
+3. Edit file by clicking the pencil icon.
+4. Edit text within the indicated field "Edit text below/above"
+<img height=130 src="./media/info/save.png" />
+5. Save changes by clicking "Commit changes"
+6. Cancel changes by clicking "Cancel changes"
+<br>
+
+<img src="./media/info/vcc_state_problem.png" />
