@@ -81,7 +81,7 @@ let target_section
 let background_pos = {x:undefined,y:undefined}
 let backgroundcounter = 0;
 
-let percentage = .77;
+let percentage = .57;
 let starting = 200;
 let about_bg = 'center end'
 // handle scroll
@@ -116,7 +116,7 @@ function handleScroll() {
             // problem container - manipulate background image 
             if(nav_element.getAttribute('href')==='#problem'){ 
                     background_pos.x = +(backgroundcounter*(percentage))*-1
-                    console.log(background_pos)
+                    // console.log(background_pos)
                     sections_gen[i].style.backgroundPosition = background_pos.x + "px";
             }
             // else if(/^#(faq|services)$/.test(nav_element.getAttribute('href'))){ 
