@@ -47,7 +47,8 @@ if(document.body.clientWidth < 1010){
 /*|*/   let starting = 200;
 /*|*/   let about_bg = 'center end'
         let clouds = [...document.querySelectorAll('.cloud')]
-
+        let hands_background = document.querySelector('.hands');
+        let opacity_count = 0;
 /*|*/// functions 
 /*|*/     function handleHamburgerMenu(e) { 
         let hamburger_children = [...hamburger.children] || [...e.currentTarget.children]
@@ -172,3 +173,34 @@ if(document.body.clientWidth < 1010){
         
     }
 
+
+
+    // cloud animation
+    let choose = 6;
+    let choices = []
+    for(let i = 0; i < clouds.length; i++){
+        clouds[i].classList.remove('blink-right','blink-left');
+
+        setInterval(()=>{
+            if(choose >=0){
+                if(choices.indexOf(clouds[i])==-1){
+                    choices.push(generateRandom(clouds))
+                    choices.length > 0 ? [...choices].map((choice,idx) =>{
+                        if(choice == choices[i]){
+                            choice.classList.remove('blink-right','blink-left')
+                            return idx % 2 == 0 ? choice.classList.add('blink-right') : choice.classList.add('blink-left')
+                        }
+                    }) : null;
+                }
+                choose -= 1
+            } else {
+                choices = []
+                choose = 6;
+            }
+        }, 3000*(i+1))
+    }
+
+    function generateRandom(array){
+        let index = Math.floor(Math.random() * array.length);
+        return array[index]
+    }

@@ -36,6 +36,7 @@ html {
     --bg-shade:#000;
     --bg-slogan:#464f58d4;
     --bg-description:#464f5879;
+    --bg-services:rgba(31, 38, 135, 0.37);
 }
 
 /* colors */
@@ -315,7 +316,7 @@ footer{
     text-align: right;
     text-shadow: .25px .25px rgb(0, 0, 0);
     font-family: var(--font-header-italic);
-    
+
 }#certification{
     margin-bottom:3rem;
     letter-spacing: 1.15px;
@@ -366,9 +367,7 @@ justify-content: center;
 }
 .servicing{
     padding:.5rem .75rem !important;
-    text-align:center;
-    justify-content: center;
-    background:var(--bg-description);
+    justify-content: end;
 }
 .alone{
     position:absolute;
@@ -428,6 +427,7 @@ background:none !important;
 #services{
     display:flex;
     flex-direction: column;
+    background-color:var(--bg-services);
 }
 #services>#column-container{
     height:100%;
@@ -450,8 +450,7 @@ background:none !important;
 
 .cloud-container {
   position: relative; /* Essential for positioning the cloud parts */
-  /* border:2px solid red; */
-  border-bottom:2px solid var(--bg-shade);
+  border-bottom:.25px solid var(--bg-description);
   /* height: 50%; */
   padding:.75rem 0;
   width:100%;
@@ -472,17 +471,43 @@ background:none !important;
   display: none; /* Hides the scrollbar */
 }
 .cloud {
-  background-color: white;
+        border-bottom: .75rem solid white;
+        border-left: .75vw solid transparent;
+        border-right: .75vw solid transparent;
+    background-image: linear-gradient(180deg,transparent 25%, white );
   border-radius:75px; /* Creates the main rounded base */
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
   display:flex;
-  align-items: center;
+  align-items: end;
   text-align: center;
   justify-content: center;
   padding:.25rem;
   font-family: var(--font-header);
-  height: 75px; 
+  height: 75px;
   transition:1.5s;
+}
+.blink-left{
+  animation: blinkcloud-left 1.5s infinite alternate
+}
+.blink-right{
+  animation: blinkcloud-right 1.5s infinite alternate
+}
+
+@keyframes blinkcloud-left {
+    from {
+        border-left: .75vw solid transparent;
+    }
+    to {
+        border-left: .75vw solid white;
+    }
+}
+@keyframes blinkcloud-right {
+    from {
+        border-right: .75vw solid transparent;
+    }
+    to {
+        border-right: .75vw solid white;
+    }
 }
 
 
@@ -515,6 +540,11 @@ background:none !important;
     .alone{
         text-align:center;
         align-items: center;
+    }
+    .hands {
+    background-size:contain;
+    background-position:unset;
+
     }
     .justify-content-important {
         justify-content: center !important;
@@ -708,6 +738,9 @@ background:none !important;
     }
 }
 @media screen and (max-width: 695px) {
+    /* .hands {
+        background-size:contain;
+    } */
     #problem{
         display:flex;
         flex-direction: column;
@@ -743,10 +776,13 @@ background:none !important;
     .take-action{
         justify-content: end;
     }
-    
+
 }
 @media screen and (max-width: 531px) {
 
+    #services {
+        height:1000px;
+    }
     #certification{
     font-family: var(--font-header);
     letter-spacing: 1.15px;
@@ -801,7 +837,7 @@ background:none !important;
     .cloud {
     width:88%;
 }
-    
+
 }
 @media screen and (max-width: 390px) {
 
@@ -811,9 +847,7 @@ background:none !important;
 .servicing{
     font-size:16pt !important;
 }
-.servicing > p {
-    font-size:21pt !important;
-}
+
 #nav-mobile{
         top:143.5px;
     }
@@ -833,6 +867,14 @@ background:none !important;
         font-size:21pt !important;
         margin-bottom:3rem;
     }
+    .cloud-container{
+        flex-wrap: nowrap;
+        padding:5px 0;
+    }
+    .hands {
+        background-size: cover;
+        background-position: 0;
+    }
     .alone {
         transform: translate(0,15px);
     }
@@ -844,7 +886,7 @@ background:none !important;
     }
     .fixed-nav {
         top:78px !important;
-    } 
+    }
 
     #home {
         margin-top:6rem;
