@@ -46,6 +46,7 @@ if(document.body.clientWidth < 1010){
 /*|*/   let percentage = .57;
 /*|*/   let starting = 200;
 /*|*/   let about_bg = 'center end'
+        let clouds = [...document.querySelectorAll('.cloud')]
 
 /*|*/// functions 
 /*|*/     function handleHamburgerMenu(e) { 
@@ -114,8 +115,9 @@ if(document.body.clientWidth < 1010){
 
 
             let sectionTop = sections_gen[i].getBoundingClientRect().y, sectionBottom = sectionTop + sections_gen[i].clientHeight;
-            if((hr.getBoundingClientRect().y > sectionTop) && hr.getBoundingClientRect().y < sectionBottom ||
-                (i==sections_gen.length - 1 && hr.getBoundingClientRect().y > sectionBottom)) {
+            let detectSection = (hr.getBoundingClientRect().y > sectionTop) && hr.getBoundingClientRect().y < sectionBottom ||
+                (i==sections_gen.length - 1 && hr.getBoundingClientRect().y > sectionBottom);
+            if(detectSection) {
                 target_section = sections_gen[i]
                 let nav_element = nav_children[i]
                 let mobile_nav_element = mobile_nav_children[i]
@@ -130,16 +132,27 @@ if(document.body.clientWidth < 1010){
                         sections_gen[i].style.backgroundPosition = background_pos.x + "px";
                         sections_gen[i].style.backgroundColor = '#464f58ba';
                 }
-           
+                if(nav_element.getAttribute('href')==='#services'){ 
+                       for(let i = 0; i < clouds.length; i++){
+                        if(hr.getBoundingClientRect().y > clouds[i].getBoundingClientRect().y){
+                            if(clouds[i].classList.contains('cloud-left') || clouds[i].classList.contains('cloud-right')){
+                                clouds[i].classList.remove('cloud-left')
+                                clouds[i].classList.remove('cloud-right')
+                            }
+                        } else {
+                            if(i%2==0){
+                                clouds[i].classList.add('cloud-left')
+                            }
+                            else {
+                                clouds[i].classList.add('cloud-right')
+                            }
+                        }
+                       }
+                }
                 else {
                     if(backgroundcounter >= 0) {
                         backgroundcounter--
                     }
-                    // if(starting_rotation < 20) {
-                    //     starting_rotation++
-                    //     rotatepara.style = `transform:rotate(${starting_rotation}deg)`
-                    // }
-                
                     starting = 200
                 }
             }
