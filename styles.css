@@ -471,7 +471,7 @@ background:none !important;
   display:flex;
   align-items: start;
   flex-wrap:wrap;
-  justify-content: start;
+  justify-content: center;
   overflow-x:scroll;
   overflow-y:hidden;
   gap:.5rem;
@@ -887,6 +887,7 @@ background-image: linear-gradient(180deg,transparent 25%, white );
     .cloud-container{
         /* flex-wrap: nowrap; */
         padding:5px;
+    justify-content: start;
         height:125px
     }
     .cloud{
