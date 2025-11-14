@@ -437,6 +437,21 @@ background:none !important;
 #services > #column-container > .section-col{
     width:100%;
 }
+.cta-mail>img {
+    transition: .25s;
+}
+.cta-mail>img:hover,.ct-mail>img:active{
+    transform:scale(1.12);
+    box-shadow: 0 12px 12px .9px rgba(0, 0, 0, 0.8); /* Optional: Add a subtle shadow */
+}
+.hands > div{
+    display:flex;
+    flex-direction: column-reverse;
+}
+.hands > div > p {
+    text-align: center;
+    width:100%;
+}
 
 /* --------------------------------------- Sections in detail --------------------------------------- */
 
@@ -451,13 +466,12 @@ background:none !important;
 .cloud-container {
   position: relative; /* Essential for positioning the cloud parts */
   border-bottom:.25px solid var(--bg-description);
-  /* height: 50%; */
   padding:.75rem 0;
   width:100%;
   display:flex;
   align-items: start;
   flex-wrap:wrap;
-  justify-content: center;
+  justify-content: start;
   overflow-x:scroll;
   overflow-y:hidden;
   gap:.5rem;
@@ -471,10 +485,10 @@ background:none !important;
   display: none; /* Hides the scrollbar */
 }
 .cloud {
-        border-bottom: .75rem solid white;
-        border-left: .75vw solid transparent;
-        border-right: .75vw solid transparent;
-    background-image: linear-gradient(180deg,transparent 25%, white );
+border-bottom: .75rem solid white;
+border-left: .75vw solid transparent;
+border-right: .75vw solid transparent;
+background-image: linear-gradient(180deg,transparent 25%, white );
   border-radius:75px; /* Creates the main rounded base */
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
   display:flex;
@@ -541,10 +555,13 @@ background:none !important;
         text-align:center;
         align-items: center;
     }
+    .hands>div {
+        margin-top:1.5rem;
+    }
     .hands {
-    background-size:contain;
-    background-position:unset;
-
+        background-size:contain;
+        background-position:unset;
+        justify-content: start;
     }
     .justify-content-important {
         justify-content: center !important;
@@ -738,9 +755,10 @@ background:none !important;
     }
 }
 @media screen and (max-width: 695px) {
-    /* .hands {
-        background-size:contain;
-    } */
+    .cta-mail > img {
+        height:88px;
+    }
+    
     #problem{
         display:flex;
         flex-direction: column;
@@ -779,7 +797,6 @@ background:none !important;
 
 }
 @media screen and (max-width: 531px) {
-
     #services {
         height:1000px;
     }
@@ -868,8 +885,19 @@ background:none !important;
         margin-bottom:3rem;
     }
     .cloud-container{
-        flex-wrap: nowrap;
-        padding:5px 0;
+        /* flex-wrap: nowrap; */
+        padding:5px;
+        height:125px
+    }
+    .cloud{
+        height:50px;
+        padding:.15rem;
+        justify-content: end;
+        align-items: center;
+        border-bottom:.25rem white;
+    }
+    .cloud>p{
+        font-size:11pt;
     }
     .hands {
         background-size: cover;
