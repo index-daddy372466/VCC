@@ -356,7 +356,7 @@ justify-content: center;
 
 }
 
-.alone,.take-action,.servicing {
+.alone,.take-action,.servicing,.faq-subheader{
     /* border:2px solid green; */
     display:flex;
     width:100%;
@@ -368,6 +368,13 @@ justify-content: center;
 .servicing{
     padding:.5rem .75rem !important;
     justify-content: end;
+}
+.faq-subheader{
+    text-align: left;
+    padding:.5rem .75rem;
+    position: absolute;
+    top:0;
+    left:0;
 }
 .alone{
     position:absolute;
@@ -544,17 +551,101 @@ background-image: linear-gradient(180deg,transparent 25%, white );
 
 
 
+
+
 /* --------------------------------------- cloud --------------------------------------- */
 
+
+/* --------------------------------------- faq area --------------------------------------- */
+#faq{
+    height:550px;
+    /* border:2px solid red; */
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom:1rem;
+    background-color:var(--bg-description)
+}
+
+.faq-container {
+    margin:2.5rem auto 0;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.faq-item {
+    border-bottom: 1px solid #eee;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 0;
+}
+
+.faq-question h3 {
+    margin: 0;
+    color: #555;
+    font-size: 1.1em;
+}
+
+.toggle-icon {
+    font-size: 1.5em;
+    color: #888;
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.faq-answer p {
+    margin-top: 10px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Styles for when an FAQ item is active/expanded (requires JavaScript to toggle a class like 'active') */
+.faq-item.active .faq-answer {
+    max-height: 200px; /* Adjust as needed for content height */
+    transition: max-height 0.5s ease-in;
+}
+
+.faq-item.active .toggle-icon {
+    transform: rotate(45deg);
+}
+/* --------------------------------------- faq area --------------------------------------- */
 
 
 /* --------------------------------------- media query --------------------------------------- */
 /* media query portrait mobile (width) */
 @media screen and (max-width:1010px) {
-    .alone{
-        text-align:center;
+    .alone,.faq-subheader{
+        text-align: center;
         align-items: center;
     }
+
     .hands>div {
         margin-top:1.5rem;
     }
@@ -758,6 +849,9 @@ background-image: linear-gradient(180deg,transparent 25%, white );
     .cta-mail > img {
         height:88px;
     }
+    .faq-subheader{
+        justify-content: center;
+    }
     
     #problem{
         display:flex;
@@ -784,7 +878,7 @@ background-image: linear-gradient(180deg,transparent 25%, white );
         align-items: center;
         gap:.6rem;
     }
-    .servicing{
+    .servicing,.faq-subheader{
         justify-content: center;
         align-items: center;
     }
@@ -797,6 +891,10 @@ background-image: linear-gradient(180deg,transparent 25%, white );
 
 }
 @media screen and (max-width: 531px) {
+    .faq-subheader{
+        font-size: 18pt !important;
+    }
+    
     #services {
         height:1000px;
     }
@@ -810,6 +908,7 @@ background-image: linear-gradient(180deg,transparent 25%, white );
     top:88px;
     left:5px;
     }
+    
     .problem-col{
         width:98%;
     }
@@ -861,7 +960,7 @@ background-image: linear-gradient(180deg,transparent 25%, white );
 #problem>.section-col{
         width:100% !important;
     }
-.servicing{
+.servicing,.faq-subheader{
     font-size:16pt !important;
 }
 

@@ -204,3 +204,15 @@ if(document.body.clientWidth < 1010){
         let index = Math.floor(Math.random() * array.length);
         return array[index]
     }
+
+
+    // faq interation
+    let faq_questions = document.querySelectorAll('.faq-item');
+    for(let i = 0; i < faq_questions.length; i++) {
+        let toggle = [...faq_questions[i].children].find(x => x.classList.contains('toggle-icon'))||[...document.querySelectorAll('.toggle-icon')][i];
+        let faq_item = toggle.parentElement.parentElement;
+        toggle.onclick = e => {
+            console.log(e.currentTarget);
+            faq_item.classList.toggle('active')
+        }
+    }
