@@ -110,8 +110,10 @@ if(document.body.clientWidth < 1010){
             }
         })
 
+        backgroundcounter = Y
+        // iterate through valid sections (section-gen)
         for(let i = 0; i < sections_gen.length; i++){
-            nav_children[i].classList.remove('target-link') // remove target link from nav list items 
+            !nav_children[i] ? null : nav_children[i].classList.remove('target-link') // remove target link from nav list items 
             if(mobile_nav_children[i])mobile_nav_children[i].classList.remove('target-link')
 
 
@@ -122,17 +124,12 @@ if(document.body.clientWidth < 1010){
                 target_section = sections_gen[i]
                 let nav_element = nav_children[i]
                 let mobile_nav_element = mobile_nav_children[i]
-                nav_element.classList.add('target-link')
+
+                if(nav_element){
+                    nav_element.classList.add('target-link')
                 mobile_nav_element.classList.add('target-link');
                 
-                backgroundcounter = Y
-                // problem container - manipulate background image 
-                if(nav_element.getAttribute('href')==='#problem'){ 
-                        background_pos.x = +(backgroundcounter*(percentage))*-1
-                        // console.log(background_pos)
-                        sections_gen[i].style.backgroundPosition = background_pos.x + "px";
-                        sections_gen[i].style.backgroundColor = '#464f58ba';
-                }
+                
                 if(nav_element.getAttribute('href')==='#services'){ 
                        for(let i = 0; i < clouds.length; i++){
                         if(hr.getBoundingClientRect().y > clouds[i].getBoundingClientRect().y){
@@ -156,8 +153,18 @@ if(document.body.clientWidth < 1010){
                     }
                     starting = 200
                 }
+                }
+                
             }
         }
+
+        // problem container - manipulate background image 
+            if(Y > document.getElementById('problem').getBoundingClientRect().y){ 
+                    background_pos.x = +(backgroundcounter*(percentage))*-1
+                    // console.log(background_pos)
+                    document.getElementById('problem').style.backgroundPosition = background_pos.x + "px";
+                    document.getElementById('problem').style.backgroundColor = '#464f58ba';
+                }
 
         // if y > top
         if(Y > document.body.scrollTop){
