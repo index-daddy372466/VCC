@@ -99,3 +99,27 @@ _______________
 <br>
 
 <img src="./media/info/faq_edit_text.png" />
+
+## 2025.11.14 9:40pm Updates
+
+1. About me template ready for editing
+1. FAQ section retired and fused with services
+1. problem "cover-phrase" moved to about me
+
+## Instruction
+
+1. Access the <a href="https://github.com/index-daddy372466/VCC/tree/certification">VCC Repository</a>
+2. <a style="text-decoration:none" href=https://github.com/index-daddy372466/VCC/blob/certification/index.html><em style="border-bottom:.5px solid red;">click here</em></a> to access the main html file, <em>index.html</em>
+<img height=160 src="./media/info/editfile.png" />
+
+3. Edit file by clicking the pencil icon.
+
+4. Edit text within the indicated field "Edit text below/above"
+<img height=130 src="./media/info/save.png" />
+
+5. Save changes by clicking "Commit changes"
+
+6. Cancel changes by clicking "Cancel changes"
+<br>
+
+<img src="./media/info/about-edit.png" />
