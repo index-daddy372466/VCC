@@ -16,13 +16,14 @@
 }
 
 .teamwork{
-  /* background-image:url('./media/concept/teamwork.png'); */
-  background-image:url('./media/concept/teamwork1.jpg');
+  background-image:url('./media/concept/teamwork.png');
+  /* background-image:url('./media/concept/teamwork1.jpg'); */
   background-size:cover;
   background-repeat:no-repeat;
   background-position:center;
 
 }
+
 .splash{
   /* background-image:url('./media/concept/teamwork.png'); */
   background-image:url('./media/concept/splash.png');
@@ -61,6 +62,11 @@
   opacity:.33;
 }
 
+.founder {
+  background-image:url('./media/founder/pro3.png');
+  background-size:contain;
+  background-repeat:no-repeat;
+}
 .frustrated{
   background-image:url('./media/concept/frustrated.png');
   background-size:cover;

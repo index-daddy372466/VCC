@@ -37,6 +37,7 @@ html {
     --bg-slogan:#464f58d4;
     --bg-description:#464f5879;
     --bg-services:rgba(31, 38, 135, 0.37);
+    --header-primary:#F3F8f9;
 }
 
 /* colors */
@@ -67,10 +68,11 @@ body{
 }
 #logo-link{
     display:flex;
-    align-items:start;
+    align-items:center;
     justify-content: start;
     transform:Scale(.88);
-    flex-direction: column;
+    /* border:2px solid yellow; */
+    flex-direction: row;
 }
 #logo-link.underline{
     border-bottom:1px solid yellow;
@@ -147,6 +149,7 @@ main{
     /* border:2px solid red; */
 }
 #cover-phrase{
+    /* background:var(--bg-shade); */
     color:#fff;
     z-index: 998;
     font-size:36pt;
@@ -173,11 +176,17 @@ footer,header{
     min-height:85px;
     max-height:100%;
     width:100%;
-    background:#000;
+    background:var(--header-primary);
     overflow:hidden;
 }
 header{
+    width:100%;
     position:fixed;
+    /* border:2px solid green; */
+    display:flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
     z-index:999;
     left:0;
 }
@@ -219,17 +228,15 @@ footer{
 
 /* ---------------- header/navigation ---------------- */
 #nav{
-    width:50%;
-    height:75px;
+    /* width:50%; */
+    /* height:75px; */
     /* border:2px solid red; */
-    position: absolute;
     display:flex;
     flex-direction: column;
     align-items: end;
-    justify-content: end;
+    justify-content: start;
     padding-right:.25rem;
-    right:0;
-    bottom:8px;
+    margin-top:.75rem;
 }
 #nav-mobile {
     display:none;
@@ -250,7 +257,7 @@ footer{
     margin-left:5px;
     background:transparent;
     font-family:var(--font-secondary);
-    color:var(--col-secondary);
+    color:var(--col-priary);
     font-weight:bold;
     font-size:12pt;
 }
@@ -350,12 +357,6 @@ justify-content: center;
     justify-content: end;
 }
 
-.section-header {
-}
-.section-subheader {
-
-}
-
 .alone,.take-action,.servicing,.faq-subheader{
     /* border:2px solid green; */
     display:flex;
@@ -372,9 +373,6 @@ justify-content: center;
 .faq-subheader{
     text-align: left;
     padding:.5rem .75rem;
-    position: absolute;
-    top:0;
-    left:0;
 }
 .alone{
     position:absolute;
@@ -432,17 +430,24 @@ background:none !important;
     background:var(--bg-description);
 }
 #services{
+    height:1150px;
     display:flex;
     flex-direction: column;
     background-color:var(--bg-services);
 }
 #services>#column-container{
-    height:100%;
+
     width:100%;
-    /* border:2px solid red; */
+    border:2px solid red;
 }
 #services > #column-container > .section-col{
     width:100%;
+}
+.cta-mail{
+    position:absolute;
+    top:20%;
+    left:50%;
+    transform:translateX(-50%);
 }
 .cta-mail>img {
     transition: .25s;
@@ -451,7 +456,13 @@ background:none !important;
     transform:scale(1.12);
     box-shadow: 0 12px 12px .9px rgba(0, 0, 0, 0.8); /* Optional: Add a subtle shadow */
 }
+#mail-container{
+    height:100%;
+    position:relative;
+}
+
 .hands > div{
+    height:100%;
     display:flex;
     flex-direction: column-reverse;
 }
@@ -551,6 +562,11 @@ background-image: linear-gradient(180deg,transparent 25%, white );
 
 
 
+/* about section */
+/* .about-col {
+    height:50%;
+    width:100%;
+} */
 
 
 /* --------------------------------------- cloud --------------------------------------- */
@@ -558,7 +574,6 @@ background-image: linear-gradient(180deg,transparent 25%, white );
 
 /* --------------------------------------- faq area --------------------------------------- */
 #faq{
-    height:550px;
     /* border:2px solid red; */
     display:flex;
     flex-direction: column;
@@ -569,11 +584,12 @@ background-image: linear-gradient(180deg,transparent 25%, white );
 }
 
 .faq-container {
-    margin:2.5rem auto 0;
-    background-color: #fff;
+    margin:.5rem auto 0;
+    background-color:#fff;
+    /* background-image: linear-gradient(transparent,#fff,#fff,#fff,#fff,#fff,#fff,transparent); */
     padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* border-radius: 8px; */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     max-width: 800px;
     width: 100%;
 }
@@ -756,6 +772,7 @@ h1 {
         font-size:12pt;
         background:var(--bg-shade);
         color:var(--col-secondary);
+        font-weight:400;
         padding:16px 0;
         color:silver;
     }
@@ -894,6 +911,9 @@ h1 {
     .faq-subheader{
         font-size: 18pt !important;
     }
+    .cta-mail{
+        top:10%;
+    }
     
     #services {
         height:1000px;
@@ -937,10 +957,10 @@ h1 {
         margin-top:2.25rem;
     }
     #img-pro{
-        height:225px;
-        width:168px;
+        height:305px;
+        width:230px;
         transform:scale(.90);
-        top:30%;
+        top:20%;
     }
     #nav-mobile{
         top:120.5px;
@@ -978,16 +998,16 @@ h1 {
 
 /* landscape phone */
 @media screen and (max-width:1000px) and (max-height:500px){
-        #cover-phrase{
+    #cover-phrase{
         text-align:left;
         font-size:21pt !important;
         margin-bottom:3rem;
     }
     .cloud-container{
-        /* flex-wrap: nowrap; */
-        padding:5px;
-    justify-content: start;
-        height:125px
+        flex-wrap: nowrap;
+        padding:12px;
+         justify-content: start;
+        /* height:125px */
     }
     .cloud{
         height:50px;
