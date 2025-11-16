@@ -45,7 +45,7 @@ html {
     --col-primary:#000;
     --col-secondary:#fff;
     --col-tertiary:var(--bg-secondary);
-    --col-subheader:#ff98ff;
+    --col-subheader:#FF8DA1;
 }
 /* fonts */
 :root {
@@ -109,8 +109,6 @@ body{
 main{
     height:100%;
     width:100%;
-
-    /* border:4px solid var(--bg-secondary); */
 }
 
 #home{
@@ -120,7 +118,7 @@ main{
     padding:0 .75rem;
     justify-content: end;
     opacity:1 !important;
-    margin-top:8rem;
+    box-shadow: 0 -.25rem 12px .9px #333;
 }
 .section-gen-link{
     transition:.5s;
@@ -128,6 +126,7 @@ main{
     width:100%;
     overflow: hidden;
     position:relative;
+    scroll-margin-top: 85px; /* Adjust this value as needed */
 }
 .hide-element{
     display:none !important;
@@ -179,6 +178,7 @@ footer,header{
     overflow:hidden;
 }
 header{
+    box-shadow: 0 -.25rem 12px .9px #333;
     width:100%;
     position:fixed;
     /* border:2px solid green; */
@@ -689,7 +689,7 @@ h1 {
     padding:0 .75rem;
     justify-content: end;
     opacity:1 !important;
-    margin-top:7.25rem;
+    /* margin-top:7.25rem; */
 }
 
 #problem {
@@ -723,7 +723,7 @@ h1 {
         border-bottom:4.5px solid var(--col-subheader);
         /* background:var(--bg-tint) !important; */
     }
-
+    
     #logo-link>img{
         height:67px;
         width:120px;
@@ -803,8 +803,8 @@ h1 {
     #hamburger-container{
         display:block;
         position:absolute;
-        top:0px;
-        right:12px;
+        top:15px;
+        right:15px;
         background:transparent;
         height:50px;
         width:50px;
@@ -871,6 +871,14 @@ h1 {
 @media screen and (max-width: 695px) {
     .cta-mail > img {
         height:88px;
+    }
+    #nav-mobile{
+        top:110.5px;
+    }
+    #logo-link{
+        flex-direction: column;
+        /* border:2px solid red; */
+        align-items: start;
     }
     .faq-subheader{
         justify-content: center;
@@ -950,7 +958,7 @@ h1 {
     #home {
         justify-content: start;
         align-items:end;
-        margin-top:9.25rem !important;
+        /* margin-top:9.25rem !important; */
     }
     #cover-phrase{
         text-align:start;
@@ -991,7 +999,7 @@ h1 {
 }
 
 #nav-mobile{
-        top:88.5px !important;
+        top:140.5px !important;
     }
 .fixed-nav{
     position:fixed;

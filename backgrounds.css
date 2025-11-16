@@ -24,6 +24,13 @@
 
 }
 
+.texture{
+  background-image:url('./media/concept/texture.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
+}
+
 .splash{
   /* background-image:url('./media/concept/teamwork.png'); */
   background-image:url('./media/concept/splash.png');

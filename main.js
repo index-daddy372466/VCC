@@ -38,7 +38,7 @@ if(document.body.clientWidth < 1010){
 //|   handle scroll variables
 /*|*/   let hr = document.getElementById('hr-primary')
 /*|*/   let sections =  [...document.querySelectorAll('.section-gen')]
-/*|*/   let sections_gen = [...document.querySelectorAll('.section-gen-link')]
+/*|*/   let sections_gen = [...document.querySelectorAll('.section-gen')]
 /*|*/   let target_section
 /*|*/   let background_pos = {x:undefined,y:undefined}
 /*|*/   let backgroundcounter = 0;
@@ -89,6 +89,7 @@ if(document.body.clientWidth < 1010){
             }
         }
         }
+        console.log(sections_gen)
 /*|*/     function hideMobileNav(nav,bool){
         if(bool===false) return
         nav.classList.add('hide-element')
@@ -116,7 +117,6 @@ if(document.body.clientWidth < 1010){
             !nav_children[i] ? null : nav_children[i].classList.remove('target-link') // remove target link from nav list items 
             if(mobile_nav_children[i])mobile_nav_children[i].classList.remove('target-link')
 
-
             let sectionTop = sections_gen[i].getBoundingClientRect().y, sectionBottom = sectionTop + sections_gen[i].clientHeight;
             let detectSection = (hr.getBoundingClientRect().y > sectionTop) && hr.getBoundingClientRect().y < sectionBottom ||
                 (i==sections_gen.length - 1 && hr.getBoundingClientRect().y > sectionBottom);
@@ -125,10 +125,9 @@ if(document.body.clientWidth < 1010){
                 let nav_element = nav_children[i]
                 let mobile_nav_element = mobile_nav_children[i]
 
-                if(nav_element){
+                if(nav_element || mobile_nav_element){
                     nav_element.classList.add('target-link')
-                mobile_nav_element.classList.add('target-link');
-                
+                    mobile_nav_element.classList.add('target-link');
                 
                 if(nav_element.getAttribute('href')==='#services'){ 
                        for(let i = 0; i < clouds.length; i++){
