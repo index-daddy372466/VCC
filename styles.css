@@ -126,7 +126,7 @@ main{
     width:100%;
     overflow: hidden;
     position:relative;
-    scroll-margin-top: 85px; /* Adjust this value as needed */
+    scroll-margin-top: 90px; /* Adjust this value as needed */
 }
 .hide-element{
     display:none !important;
@@ -668,6 +668,10 @@ h1 {
         align-items: center;
     }
 
+    .section-gen-link{
+    scroll-margin-top: 85px; /* Adjust this value as needed */
+    }
+
     .hands>div {
         margin-top:1.5rem;
     }
@@ -922,6 +926,9 @@ h1 {
 
 }
 @media screen and (max-width: 531px) {
+    .section-gen-link{
+        scroll-margin-top:109px;
+    }
     .faq-subheader{
         font-size: 18pt !important;
     }
