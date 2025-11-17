@@ -480,6 +480,7 @@ background:none !important;
     height:100%;
     width:100%;
     position:relative;
+    border:2px solid cyan
 }
 
 .hands > div{
@@ -1098,17 +1099,19 @@ h1 {
         left:25%;
     }
     #home {
-        justify-content: start;
-        align-items:end;
+        justify-content: center;
+        align-items:center;
         /* margin-top:9.25rem !important; */
     }
     #cover-phrase{
-        text-align:start;
+        text-align:center;
         font-size:16pt !important;
         margin-bottom:3rem;
     }
     #cover-phrase-container{
         width:100%;
+        align-items: center;
+        /* bordeR:2px solid red; */
         margin-bottom:unset;
         margin-top:2.25rem;
     }
