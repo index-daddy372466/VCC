@@ -8,7 +8,8 @@ let nav_children = [...nav.children[0].children].map(x=>x.children[0]) // articl
 let mobile_nav_children = [...mobile_nav.children[0].children].map(x=>x) // article elements
 let header = document.querySelector('header')
 let problemcontainer = document.getElementById('problem')
-
+const faqcontainer = document.querySelector('.faq-container')
+const faqtoggle = document.getElementById('faq-toggle')
 
 
 // window event - scroll
@@ -143,6 +144,7 @@ if(document.body.clientWidth < 1010){
                         backgroundcounter--
                     }
                     document.querySelector('.scroll-top').scrollTo(0,0)
+                    handleFAQToggle(false)
                     starting = 200
                 }
                 }
@@ -204,12 +206,9 @@ if(document.body.clientWidth < 1010){
     }
 
     // faq interation
-    const faqcontainer = document.querySelector('.faq-container')
-    const faqtoggle = document.getElementById('faq-toggle')
 
     // toggle faq window
     faqtoggle.onclick = handleFAQToggle
-    let visibility = false;
 
     let faq_questions = document.querySelectorAll('.faq-item');
     for(let i = 0; i < faq_questions.length; i++) {
@@ -222,7 +221,7 @@ if(document.body.clientWidth < 1010){
     }
 
     // toggle faq window function
-    function handleFAQToggle() {
-        visibility = !visibility;
-        return !visibility ? faqcontainer.classList.add('faq-close') : faqcontainer.classList.remove('faq-close')
+    function handleFAQToggle(bool) {
+        bool==false ? faqcontainer.classList.add('faq-close') : faqcontainer.classList.toggle('faq-close')
+        return;
     }
