@@ -9,12 +9,7 @@ let mobile_nav_children = [...mobile_nav.children[0].children].map(x=>x) // arti
 let header = document.querySelector('header')
 let problemcontainer = document.getElementById('problem')
 
-/* -------------------------- special paragraphs and phrases -------------------------- */
-let rotatepara = document.querySelector(".rotate-para");
 
-
-
-/* -------------------------- special paragraphs and phrases -------------------------- */
 
 // window event - scroll
 window.onscroll = handleScroll
@@ -30,8 +25,6 @@ if(document.body.clientWidth < 1010){
         child.onclick = () => handleHamburgerMenu()
     })
 }
-
-
 
 
 
@@ -60,20 +53,17 @@ if(document.body.clientWidth < 1010){
                 switch(true){
                     case i%2 == 0:
                     get_s_class = [...children[i].classList].find(x=>/^s\d{1}$/gi.test(x))
-                    console.log(get_s_class)
                     get_s_class += `-${hamburger_options[i%2]}`
                     break;
                     case i%2 == 1:
                     get_s_class = [...children[i].classList].find(x=>/^s\d{1}$/gi.test(x))
-                    console.log(get_s_class)
                     get_s_class += `-${hamburger_options[i%2]}`
                     break;
 
-                    default:console.log(undefined)
+                    default:undefined;
                     break;
                 }
 
-                console.log(get_s_class);
                 children[i].classList.toggle(get_s_class)
                 
             }
@@ -89,7 +79,6 @@ if(document.body.clientWidth < 1010){
             }
         }
         }
-        console.log(sections_gen)
 /*|*/     function hideMobileNav(nav,bool){
         if(bool===false) return
         nav.classList.add('hide-element')
@@ -117,7 +106,9 @@ if(document.body.clientWidth < 1010){
             !nav_children[i] ? null : nav_children[i].classList.remove('target-link') // remove target link from nav list items 
             if(mobile_nav_children[i])mobile_nav_children[i].classList.remove('target-link')
 
+            // defined secitons
             let sectionTop = sections_gen[i].getBoundingClientRect().y, sectionBottom = sectionTop + sections_gen[i].clientHeight;
+            
             let detectSection = (hr.getBoundingClientRect().y > sectionTop) && hr.getBoundingClientRect().y < sectionBottom ||
                 (i==sections_gen.length - 1 && hr.getBoundingClientRect().y > sectionBottom);
             if(detectSection) {
@@ -146,10 +137,12 @@ if(document.body.clientWidth < 1010){
                         }
                        }
                 }
+            
                 else {
                     if(backgroundcounter >= 0) {
                         backgroundcounter--
                     }
+                    document.querySelector('.scroll-top').scrollTo(0,0)
                     starting = 200
                 }
                 }
@@ -160,7 +153,6 @@ if(document.body.clientWidth < 1010){
         // problem container - manipulate background image 
             if(Y > document.getElementById('problem').getBoundingClientRect().y){ 
                     background_pos.x = +(backgroundcounter*(percentage))*-1
-                    // console.log(background_pos)
                     document.getElementById('problem').style.backgroundPosition = background_pos.x + "px";
                     document.getElementById('problem').style.backgroundColor = '#464f58ba';
                 }
@@ -211,13 +203,26 @@ if(document.body.clientWidth < 1010){
         return array[index]
     }
 
-
     // faq interation
+    const faqcontainer = document.querySelector('.faq-container')
+    const faqtoggle = document.getElementById('faq-toggle')
+
+    // toggle faq window
+    faqtoggle.onclick = handleFAQToggle
+    let visibility = false;
+
     let faq_questions = document.querySelectorAll('.faq-item');
     for(let i = 0; i < faq_questions.length; i++) {
         let toggle = [...faq_questions[i].children].find(x => x.classList.contains('toggle-icon'))||[...document.querySelectorAll('.toggle-icon')][i];
         let faq_item = toggle.parentElement.parentElement;
-        toggle.onclick = e => {
+        // faq.onclick = e => {
+        faq_questions[i].children[0].onclick = e => {
             faq_item.classList.toggle('active')
         }
+    }
+
+    // toggle faq window function
+    function handleFAQToggle() {
+        visibility = !visibility;
+        return !visibility ? faqcontainer.classList.add('faq-close') : faqcontainer.classList.remove('faq-close')
     }
