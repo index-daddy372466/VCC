@@ -53,9 +53,7 @@ html {
     --font-header-italic:'Merriweather-italic', Arial, Helvetica, sans-serif !important;
     --font-secondary:Arial, Helvetica, sans-serif;
 }
-.c {
-    display:none;
-}
+
 body{
     background-color:var(--bg-primary);
     height:100vh;
@@ -368,11 +366,23 @@ footer{
 
 /* columns within section
  */
- #problem {
+ /* #problem {
 flex-direction: column;
 align-items: end;
 justify-content: center;
+} */
+ #problem {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    grid-template-areas:"c a"
+                        "c b";
 }
+.a { grid-area: a; }
+.b { grid-area: b; }
+.c { grid-area: c;}
 .flex-method{
     align-items: start;
     justify-content: end;
@@ -452,7 +462,7 @@ background:none !important;
 
 
 #problem > .section-col{
-    width:59%;
+    width:100%;
     background:var(--bg-description);
 }
 #services{
@@ -460,6 +470,15 @@ background:none !important;
     display:flex;
     flex-direction: column;
     background-color:var(--bg-services);
+}
+#services-span{
+    color:var(--col-primary);
+    width:350px;
+    border-bottom:.5px solid #333;
+    background:transparent;
+    padding:.25rem .5rem 0;
+    font-family:var(--font-header-italic);
+    font-size:11pt;
 }
 #services>#column-container{
     height:100% !important;
@@ -470,19 +489,23 @@ background:none !important;
     overflow-y:scroll;
     width:inherit;
 }
+.cta-mail-problem{
+    border:2px solid red;
+}
 .cta-mail{
     position:absolute;
     top:20%;
     left:50%;
-    transform:translateX(-50%);
+    transform:translateX(-50%) translateY(-25%);
     display:flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap:.5rem;
     text-align: center;
     width:100%;
-    z-index: 999;
     color:var(--col-primary);
+    height:100%;
 }
 #cta-label {
     font-family: var(--font-header-italic);
@@ -491,7 +514,7 @@ background:none !important;
     transition: .25s;
 }
 .cta-mail>img:hover,.ct-mail>img:active{
-    transform:scale(1.12);
+    transform:scale(1.05);
     box-shadow: 0 12px 12px .9px rgba(0, 0, 0, 0.8); /* Optional: Add a subtle shadow */
 }
 
@@ -555,7 +578,6 @@ background-image: linear-gradient(180deg,transparent 25%, white );
   padding:.25rem;
   font-family: var(--font-header);
   height: 75px;
-  transition:1.5s;
 }
 /* .cloudV2{
      display:flex;
@@ -592,14 +614,14 @@ background-image: linear-gradient(180deg,transparent 25%, white );
 }
 
 
-.cloud-left{
+/* .cloud-left{
     transform:translate(-100%,100px);
     transition:.5s;
 }
 .cloud-right{
     transform:translate(100%,100px);
     transition:.5s;
-}
+} */
 .cloud::before,
 .cloud::after {
   content: '';
@@ -845,10 +867,6 @@ h1 {
     grid-template-areas:"c a"
                         "b b";
 }
-.a { grid-area: a; }
-.b { grid-area: b; }
-.c { grid-area: c;
-    display:none; }
 
  .section-col>.description>p {
     text-align: left;
@@ -1049,20 +1067,13 @@ h1 {
         justify-content: center;
     }
     
-    #problem{
-        display:flex;
-        flex-direction: column;
-        align-items: end;
-    }
     .section-subheader>h2{
         font-size:21pt;
     }
     #services > .section-subheader{
         display:block;
-}
-    #problem>.section-col{
-        width: 90% !important;;
     }
+   
     .section-col>.description>p {
         text-align: left;
     }
@@ -1087,6 +1098,18 @@ h1 {
 
     .section-gen-link{
         scroll-margin-top:105px !important;
+    }
+    .cloud {
+        border-bottom: .75rem solid white;
+        border-left: .75vw solid transparent;
+        border-right: .75vw solid transparent;
+        background-image: linear-gradient(180deg,transparent 25%, white );
+        border-radius:75px; /* Creates the main rounded base */
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
+        font-size:9pt;
+        padding:.25rem .05rem;
+        font-family: var(--font-header);
+        height: 50px;
     }
 }
 @media screen and (max-width: 531px) {
@@ -1113,7 +1136,12 @@ h1 {
     top:88px;
     left:5px;
     }
-    
+    #problem{
+        display:Flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
     .problem-col{
         width:98%;
     }
@@ -1151,12 +1179,17 @@ h1 {
         left:0;
         top:105px !important;
     }
+    .servicing{
+        gap:unset;
+    }
     .cloud {
     width:68%;
 }
 }
 @media screen and (max-width: 390px) {
-    
+.section-col>.description>p {
+    font-size:12pt;
+}
 .section-gen-link{
     scroll-margin-top: 136px !important;
 }

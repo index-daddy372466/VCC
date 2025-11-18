@@ -10,7 +10,7 @@ let header = document.querySelector('header')
 let problemcontainer = document.getElementById('problem')
 const faqcontainer = document.querySelector('.faq-container')
 const faqtoggle = document.getElementById('faq-toggle')
-
+const learnmore = document.getElementById('learn-more')
 
 // window event - scroll
 window.onscroll = handleScroll
@@ -20,12 +20,10 @@ document.getElementById('problem').classList.remove('appear-section')
 
 // click hamburger menu
 hamburger.addEventListener('click',handleHamburgerMenu) 
-if(document.body.clientWidth < 1010){
-    let nav_children = [...mobile_nav.children]
-    nav_children.map(child => {
+    let nav_children_mobile = [...mobile_nav.children]
+    nav_children_mobile.map(child => {
         child.onclick = () => handleHamburgerMenu()
     })
-}
 
 
 
@@ -46,7 +44,6 @@ if(document.body.clientWidth < 1010){
 /*|*/// functions 
 /*|*/     function handleHamburgerMenu(e) { 
         let hamburger_children = [...hamburger.children] || [...e.currentTarget.children]
-        if(document.body.clientWidth < mobile_limit) {
             let children = [...hamburger_children]
             for(let i = 0; i < children.length; i++) {
 
@@ -78,7 +75,6 @@ if(document.body.clientWidth < 1010){
                 hamburger_children.map(child => child.classList.remove('enabled'))
                 hamburger_children.map(child => child.classList.add('disabled'))
             }
-        }
         }
 /*|*/     function hideMobileNav(nav,bool){
         if(bool===false) return
@@ -122,21 +118,22 @@ if(document.body.clientWidth < 1010){
                     mobile_nav_element.classList.add('target-link');
                 
                 if(nav_element.getAttribute('href')==='#services'){ 
-                       for(let i = 0; i < clouds.length; i++){
-                        if(hr.getBoundingClientRect().y > clouds[i].getBoundingClientRect().y){
-                            if(clouds[i].classList.contains('cloud-left') || clouds[i].classList.contains('cloud-right')){
-                                clouds[i].classList.remove('cloud-left')
-                                clouds[i].classList.remove('cloud-right')
-                            }
-                        } else {
-                            if(i%2==0){
-                                clouds[i].classList.add('cloud-left')
-                            }
-                            else {
-                                clouds[i].classList.add('cloud-right')
-                            }
-                        }
-                       }
+                    //    for(let i = 0; i < clouds.length; i++){
+                    //     if(hr.getBoundingClientRect().y > clouds[i].getBoundingClientRect().y){
+                    //         if(clouds[i].classList.contains('cloud-left') || clouds[i].classList.contains('cloud-right')){
+                    //             clouds[i].classList.remove('cloud-left')
+                    //             clouds[i].classList.remove('cloud-right')
+                    //         }
+                    //     } else {
+                    //         if(i%2==0){
+                    //             clouds[i].classList.add('cloud-left')
+                    //         }
+                    //         else {
+                    //             clouds[i].classList.add('cloud-right')
+                    //         }
+                    //     }
+                    //    }
+                    return null;
                 }
             
                 else {
@@ -144,7 +141,6 @@ if(document.body.clientWidth < 1010){
                         backgroundcounter--
                     }
                     document.querySelector('.scroll-top').scrollTo(0,0)
-                    document.getElementById('about').scrollTo(0,0)
                     handleFAQToggle(false)
                     starting = 200
                 }
@@ -225,4 +221,18 @@ if(document.body.clientWidth < 1010){
     function handleFAQToggle(bool) {
         bool==false ? faqcontainer.classList.add('faq-close') : faqcontainer.classList.toggle('faq-close')
         return;
+    }
+
+
+
+    // learn more
+    learnmore.onmouseover = e => {
+        let path = './media/icons/down1.png'
+        let arrow = e.currentTarget.children[0]
+        arrow.src = path;
+    }
+    learnmore.onmouseout = e => {
+        let path = './media/icons/down.png'
+        let arrow = e.currentTarget.children[0]
+        arrow.src = path;
     }
