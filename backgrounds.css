@@ -76,6 +76,7 @@
 }
 .frustrated{
   background-image:url('./media/concept/frustrated.png');
+  /* background-image:url('./media/concept/frustrated4.jpg'); */
   background-size:cover;
   background-repeat:no-repeat;
   background-position:0;
