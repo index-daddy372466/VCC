@@ -6,6 +6,7 @@ let hamburger_options = ['rotate','disappear']
 let [nav,mobile_nav] = [document.getElementById('nav'),document.getElementById('nav-mobile')]
 let nav_children = [...nav.children[0].children].map(x=>x.children[0]) // article elements
 let mobile_nav_children = [...mobile_nav.children[0].children].map(x=>x) // article elements
+let mobile_nav_children_original = [...mobile_nav.children] // mobile navigation [ array ] instance 
 let header = document.querySelector('header')
 let problemcontainer = document.getElementById('problem')
 const faqcontainer = document.querySelector('.faq-container')
@@ -20,12 +21,9 @@ document.getElementById('problem').classList.remove('appear-section')
 
 // click hamburger menu
 hamburger.addEventListener('click',handleHamburgerMenu) 
-if(document.body.clientWidth < 1010){
-    let nav_children = [...mobile_nav.children]
-    nav_children.map(child => {
+    mobile_nav_children_original.map(child => {
         child.onclick = () => handleHamburgerMenu()
     })
-}
 
 
 
@@ -46,7 +44,7 @@ if(document.body.clientWidth < 1010){
 /*|*/// functions 
 /*|*/     function handleHamburgerMenu(e) { 
         let hamburger_children = [...hamburger.children] || [...e.currentTarget.children]
-        if(document.body.clientWidth < mobile_limit) {
+        // if(document.body.clientWidth < mobile_limit) {
             let children = [...hamburger_children]
             for(let i = 0; i < children.length; i++) {
 
@@ -78,7 +76,7 @@ if(document.body.clientWidth < 1010){
                 hamburger_children.map(child => child.classList.remove('enabled'))
                 hamburger_children.map(child => child.classList.add('disabled'))
             }
-        }
+        // }
         }
 /*|*/     function hideMobileNav(nav,bool){
         if(bool===false) return
