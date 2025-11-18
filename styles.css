@@ -302,7 +302,14 @@ footer{
     z-index: 997;
     border-radius: 50%;
     box-shadow: 0 1.25px 12px .9px var(--bg-secondary);
-    margin-bottom: 1.5rem
+    margin-bottom: 1.5rem;
+}
+#img-cert {
+    /* background:var(--bg-tint); */
+    width:150px;
+    left:50%;
+    position:absolute;
+    transform:translate(-200px,200px);
 }
 .slogan-actual-top,
 .slogan-actual-bottom{
@@ -998,9 +1005,13 @@ h1 {
     }
 }
 @media screen and (max-width: 695px) {
+    #img-cert {
+    transform:translate(-150%,150%);
+    width:110px;
+}
     #mail-container {
         max-height:350px !important;
-        border:2px solid green;
+        /* border:2px solid green; */
     }
     .hands {
         background-size: cover;
@@ -1170,8 +1181,15 @@ h1 {
 
 /* landscape phone */
 @media screen and (max-width:1000px) and (max-height:500px){
+    #img-cert {
+        transform:translate(-150%,150%);
+        width:110px;
+    }
     #about {
         min-height:215vh
+    }
+    #about-phrase>p,.faq-question h3 {
+        font-size:16pt !important;
     }
     #cover-phrase{
         text-align:left;
