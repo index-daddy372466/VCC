@@ -144,6 +144,7 @@ if(document.body.clientWidth < 1010){
                         backgroundcounter--
                     }
                     document.querySelector('.scroll-top').scrollTo(0,0)
+                    document.getElementById('about').scrollTo(0,0)
                     handleFAQToggle(false)
                     starting = 200
                 }

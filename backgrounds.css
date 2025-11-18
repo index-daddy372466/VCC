@@ -132,4 +132,12 @@
   background-position:center center;
   background-attachment: fixed; /* Optional: keeps the background fixed during scroll */
 }
+.solid-sky {
+  background-image:url('./media/concept/solid-sky.jpg');
+  background-color:unset !important;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:start;
+  background-attachment: fixed; /* Optional: keeps the background fixed during scroll */
+}
 
