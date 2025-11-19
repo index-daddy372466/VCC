@@ -1155,7 +1155,7 @@ h1 {
 @media screen and (max-width: 390px) {
 
 .section-gen-link{
-    scroll-margin-top: 136px !important;
+    scroll-margin-top: 80px !important;
 }
 #problem>.section-col{
         width:100% !important;
