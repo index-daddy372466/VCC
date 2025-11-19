@@ -118,22 +118,12 @@ hamburger.addEventListener('click',handleHamburgerMenu)
                     mobile_nav_element.classList.add('target-link');
                 
                 if(nav_element.getAttribute('href')==='#services'){ 
-                    //    for(let i = 0; i < clouds.length; i++){
-                    //     if(hr.getBoundingClientRect().y > clouds[i].getBoundingClientRect().y){
-                    //         if(clouds[i].classList.contains('cloud-left') || clouds[i].classList.contains('cloud-right')){
-                    //             clouds[i].classList.remove('cloud-left')
-                    //             clouds[i].classList.remove('cloud-right')
-                    //         }
-                    //     } else {
-                    //         if(i%2==0){
-                    //             clouds[i].classList.add('cloud-left')
-                    //         }
-                    //         else {
-                    //             clouds[i].classList.add('cloud-right')
-                    //         }
-                    //     }
-                    //    }
-                    return null;
+                       for(let i = 0; i < clouds.length; i++){
+                        if(hr.getBoundingClientRect().y > clouds[i].getBoundingClientRect().y){
+                            if(clouds[i].classList.contains('cloud-hidden')) clouds[i].classList.remove('cloud-hidden')
+                        } else {
+                        clouds[i].classList.add('cloud-hidden')}
+                    }
                 }
             
                 else {
