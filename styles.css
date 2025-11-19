@@ -36,6 +36,7 @@ html {
     --bg-shade:#000;
     --bg-slogan:#464f58d4;
     --bg-description:#464f5879;
+    --bg-column:#464f585f;
     --bg-services:rgba(31, 38, 135, 0.37);
     --header-primary:#F3F8f9;
 }
@@ -53,9 +54,10 @@ html {
     --font-header-italic:'Merriweather-italic', Arial, Helvetica, sans-serif !important;
     --font-secondary:Arial, Helvetica, sans-serif;
 }
-
+.white {
+  background-color:var(--bg-tint);
+}
 body{
-    background-color:var(--bg-primary);
     height:100vh;
     width:100%;
     display:flex;
@@ -140,7 +142,7 @@ main{
 #about-me-para-actual{
     text-align: left;
     padding:.25rem;
-    font-size:14pt;
+    font-size:18pt;
     color:var(--col-secondary);
     font-family: var(--font-header-italic);
     letter-spacing: 1.5px;
@@ -453,7 +455,7 @@ background:none !important;
     width:100%;
 }
 .section-col>.description>p {
-    font-size:21pt;
+    font-size:18pt;
     color:var(--col-secondary);
     font-family: var(--font-header-italic);
     text-align: left;
@@ -463,7 +465,7 @@ background:none !important;
 
 #problem > .section-col{
     width:100%;
-    background:var(--bg-description);
+    background:var(--bg-column);
 }
 #services{
     height: 100% !important;
@@ -489,12 +491,10 @@ background:none !important;
     overflow-y:scroll;
     width:inherit;
 }
-.cta-mail-problem{
-    border:2px solid red;
-}
+
 .cta-mail{
     position:absolute;
-    top:20%;
+    top:25%;
     left:50%;
     transform:translateX(-50%) translateY(-25%);
     display:flex;
@@ -505,7 +505,7 @@ background:none !important;
     text-align: center;
     width:100%;
     color:var(--col-primary);
-    height:100%;
+    z-index: 998;
 }
 #cta-label {
     font-family: var(--font-header-italic);
@@ -837,7 +837,7 @@ h1 {
         justify-content: start;
     }
     .faq-question h3{
-        font-size:18pt;
+        font-size:16pt;
     }
     .faq-answer p{
         font-size:11pt;
@@ -1027,6 +1027,9 @@ h1 {
     transform:translate(-150%,150%);
     width:110px;
 }
+.italic-word {
+        font-size:35px;
+    }
     #mail-container {
         max-height:350px !important;
         /* border:2px solid green; */
@@ -1116,11 +1119,14 @@ h1 {
     .section-gen-link{
         scroll-margin-top:100px !important;
     }
+    .section-col>.description>p {
+    font-size:12pt;
+}
     .faq-subheader{
         font-size: 18pt !important;
     }
     .cta-mail{
-        top:10%;
+        top:30%;
     }
     
     #services{
@@ -1170,7 +1176,6 @@ h1 {
         margin-bottom:unset;
         margin-top:2.25rem;
     }
-    
     #nav-mobile{
         top:110.5px;
     }
@@ -1180,16 +1185,14 @@ h1 {
         top:105px !important;
     }
     .servicing{
-        gap:unset;
+        gap:8px;
     }
     .cloud {
     width:68%;
 }
 }
 @media screen and (max-width: 390px) {
-.section-col>.description>p {
-    font-size:12pt;
-}
+
 .section-gen-link{
     scroll-margin-top: 136px !important;
 }
