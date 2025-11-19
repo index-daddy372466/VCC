@@ -118,19 +118,18 @@ hamburger.addEventListener('click',handleHamburgerMenu)
                     mobile_nav_element.classList.add('target-link');
                 
                 if(nav_element.getAttribute('href')==='#services'){ 
-                       for(let i = 0; i < clouds.length; i++){
-                        if(hr.getBoundingClientRect().y > clouds[i].getBoundingClientRect().y){
-                            if(clouds[i].classList.contains('cloud-hidden')) clouds[i].classList.remove('cloud-hidden')
-                        } else {
-                        clouds[i].classList.add('cloud-hidden')}
-                    }
+                    //    for(let i = 0; i < clouds.length; i++){
+                    //     if(hr.getBoundingClientRect().y > clouds[i].getBoundingClientRect().y){
+                    //         if(clouds[i].classList.contains('cloud-hidden')) clouds[i].classList.remove('cloud-hidden')
+                    //     } else {
+                    //     clouds[i].classList.add('cloud-hidden')}
+                    // }
                 }
-            
                 else {
                     if(backgroundcounter >= 0) {
                         backgroundcounter--
                     }
-                    document.querySelector('.scroll-top').scrollTo(0,0)
+                    // document.querySelector('.scroll-top').scrollTo(0,0)
                     handleFAQToggle(false)
                     starting = 200
                 }
