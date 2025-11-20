@@ -48,7 +48,7 @@ Click <a href="https://index-daddy372466.github.io/VCC/">here</a> to access your
 "Empowering individuals with disabilities to discover their strengths, build meaningful careers, and create lasting value in the workplace." -->
 
 
-## 2025.11.13 Updates
+<!-- ## 2025.11.13 Updates
 
 1. Problem section 
 - text and subheaders added
@@ -122,4 +122,33 @@ _______________
 6. Cancel changes by clicking "Cancel changes"
 <br>
 
-<img src="./media/info/about-edit.png" />
+<img src="./media/info/about-edit.png" /> -->
+
+
+## Youre site is on it's way!
+
+## 2025.11.19 Updates
+
+1. section backgrounds updated
+1. VC logo updated
+1. padding on both ends of the site should allow user to scroll without getting stuck in 1 section 
+1. contact template updated
+1. mobile and desktop compatability enhanced
+
+## Instruction
+
+1. Access the <a href="https://github.com/index-daddy372466/VCC/tree/certification">VCC Repository</a>
+2. <a style="text-decoration:none" href=https://github.com/index-daddy372466/VCC/blob/certification/index.html><em style="border-bottom:.5px solid red;">click here</em></a> to access the main html file, <em>index.html</em>
+<img height=160 src="./media/info/editfile.png" />
+
+3. Edit file by clicking the pencil icon.
+
+4. Edit text within the indicated field "Edit text below/above"
+<img height=130 src="./media/info/save.png" />
+
+5. Save changes by clicking "Commit changes"
+
+6. Cancel changes by clicking "Cancel changes"
+<br>
+
+<img src="./media/info/contact edit.png" />

@@ -79,6 +79,9 @@ body{
 .text-shadow-reg{
     text-shadow: .75px .75px var(--bg-description);
 }
+.text-shadow-max{
+    text-shadow: .75px .75px var(--bg-shade);
+}
 #logo-link>#acro {
     margin-top:1rem;
     color:var(--col-subheader);
@@ -107,7 +110,7 @@ body{
         height:60px !important;
         width:200px !important;
 }
-
+#faq-toggle,
 .disable-highlight,
 .nav-mobile-list-link,
 .nav-list-item > a{
@@ -147,17 +150,78 @@ main{
     padding:0 .75rem;
     justify-content: center;
 }
-#about-me-para{
+#about-me-para, #contact-desc-para{
     overflow: hidden;
     display:inline;
 }
-#about-me-para-actual{
+
+#about-me-para-actual, #contact-para{
     text-align: left;
     padding:.25rem;
     font-size:14pt;
-    color:var(--col-secondary);
     font-family: var(--font-header-italic);
     letter-spacing: 1.5px;
+}
+#about-me-para-actual{
+    color:var(--col-secondary);
+}
+
+#contact {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    width:100%;
+    gap:2rem;
+}
+.contact-list-item{
+    text-align: center;
+}
+#contact-icon-container{
+    width:50%;
+    text-align: center;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#contact-display-container{
+    width:95%;
+    height:100%;
+}
+#contact-info-container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:.5rem;
+}
+.contact-answer{
+    font-size:11pt;
+    font-weight: bold;
+}
+.contact-label,.contact-answer {
+    font-family: var(--font-header);
+}
+#contact-para{
+    font-weight: bold;
+    color:var(--col-primary);
+    width:90%;
+    line-height: 1.25rem;
+    text-align: center;
+    border: 2px solid var(--col-primary);
+    border-top:none !important; 
+    border-left:none !important; 
+    border-right:none !important; 
+    padding:.5rem;
+    border-radius: 20px;
+}
+#contact-desc-para{
+    display:flex;
+    height:100%;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 .section-gen-link{
     transition:.5s;
@@ -165,7 +229,7 @@ main{
     width:100%;
     overflow: hidden;
     position:relative;
-    scroll-margin-top: 90px; /* Adjust this value as needed */
+    scroll-margin-top: 80px; /* Adjust this value as needed */
 }
 .hide-element{
     display:none !important;
@@ -392,12 +456,15 @@ footer{
     justify-content: end;
 }
 
-.alone,.take-action,.servicing,.faq-subheader{
+.alone,.take-action,.servicing,.faq-subheader,.contacting{
     display:flex;
     width:100%;
     align-items: end;
     gap:1rem;
     padding:0 .75rem;
+}
+.mix-blend {
+mix-blend-mode: difference !important;
 }
 .alone,.take-action,.faq-subheader{
     color:var(--col-secondary);
@@ -405,6 +472,12 @@ footer{
 
 .servicing{
     color:var(--bg-slogan);
+}
+.contacting{
+    color:var(--col-secondary);
+    padding:.5rem 0;
+    justify-content: center;
+    text-align: center;
 }
 .servicing{
     padding:.5rem .75rem !important;
@@ -448,7 +521,7 @@ background:none !important;
     position:relative;
 }
 
-.text-align-center{
+.text-align{
     text-align: center !important;
     margin-top:2rem;
 }
@@ -776,7 +849,10 @@ h1 {
         text-align: center;
         align-items: center;
     }
-
+    .cta-mail > img {
+        height:88px;
+        transform:scale(.88)
+    }
     .section-gen-link{
     scroll-margin-top: 65px; /* Adjust this value as needed */
     }
@@ -971,7 +1047,7 @@ h1 {
     }
 }
 @media screen and (max-width: 695px) {
-    #about-me-para-actual{
+    #about-me-para-actual,#contact-para{
         font-size:11pt;
     }
 
@@ -1017,10 +1093,7 @@ h1 {
     .rates-col{
         text-align: center;
     }
-    .cta-mail > img {
-        height:88px;
-        transform:scale(.88)
-    }
+    
     #nav-mobile{
         top:80px;
     }
@@ -1048,7 +1121,7 @@ h1 {
     #services > #column-container {
         grid-template-columns: 1fr;
     }
-    .alone,.take-action{
+    .alone,.take-action,.contacting{
         flex-direction: row;
         align-items: center;
         gap:.6rem;
@@ -1056,6 +1129,10 @@ h1 {
     .servicing,.faq-subheader{
         justify-content: center;
         align-items: center;
+    }
+    .text-align{
+        text-align: left !important;
+        margin-top:2rem;
     }
     .alone{
         justify-content: start;
@@ -1081,7 +1158,7 @@ h1 {
     }
    
 }
-@media screen and (max-width: 531px) {
+@media screen and (max-width: 565px) {
     
     .section-col>.description>p {
     font-size:12pt;
@@ -1173,6 +1250,9 @@ h1 {
         transform:translate(-130%,100%);
         width:110px;
     }
+    #contact{
+        height:185vh !important;
+    }
     #img-pro{
         transition:.5s;
         height:225px;
@@ -1225,6 +1305,9 @@ h1 {
     }
     .section-col>.description>p {
         font-size:14pt;
+    }
+    .landscape-height{
+        min-height:125vh !important;
     }
     #nav-mobile{
         top:85.5px;

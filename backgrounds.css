@@ -133,12 +133,13 @@
   background-position:center center;
   background-attachment: fixed; /* Optional: keeps the background fixed during scroll */
 }
-.solid-sky {
-  background-image:url('./media/concept/solid-sky.jpg');
-  background-color:unset !important;
+.rose {
+  /* background-image:url('./media/concept/solid-sky.jpg'); */
+  background-image:url('./media/concept/rose.jpg');
+  background-color:rgb(255, 255, 255) !important;
   background-size:cover;
+  background-blend-mode:multiply;
   background-repeat:no-repeat;
-  background-position:start;
+  background-position:center;
   background-attachment: fixed; /* Optional: keeps the background fixed during scroll */
 }
-
