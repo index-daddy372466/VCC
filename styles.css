@@ -567,11 +567,10 @@ background:none !important;
     width:inherit;
 }
 
-.cta-mail{
+.cta-mail,.cta-phone{
     position:absolute;
     top:25%;
     left:50%;
-    transform:translateX(-50%) translateY(-25%);
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -585,10 +584,18 @@ background:none !important;
 #cta-label {
     font-family: var(--font-header-italic);
 }
-.cta-mail>img {
-    transition: .25s;
+.cta-mail{
+    transform:translateX(-50%) translateY(-25%);
 }
-.cta-mail>img:hover,.ct-mail>img:active{
+.cta-phone{
+    transform:translateX(-50%) translateY(110%);
+}
+.cta-mail>img,.cta-phone>img{
+    transition: .25s;
+    transform:scale(.88)
+}
+.cta-mail>img:hover,.cta-mail>img:active,
+.cta-phone>img:hover,.cta-mail>img:active{
     transform:scale(1.05);
     box-shadow: 0 12px 12px .9px rgba(0, 0, 0, 0.8); /* Optional: Add a subtle shadow */
 }
@@ -598,6 +605,7 @@ background:none !important;
     width:100%;
     position:relative;
 }
+
 
 .hands > div{
     height:100%;
@@ -849,9 +857,8 @@ h1 {
         text-align: center;
         align-items: center;
     }
-    .cta-mail > img {
+    .cta-mail > img,.cta-phone>img {
         height:88px;
-        transform:scale(.88)
     }
     .section-gen-link{
     scroll-margin-top: 65px; /* Adjust this value as needed */
@@ -1049,6 +1056,9 @@ h1 {
 @media screen and (max-width: 695px) {
     #about-me-para-actual,#contact-para{
         font-size:11pt;
+    }
+    .cta-mail>img,.cta-phone>img{
+        height:77px
     }
 
     #img-pro{
