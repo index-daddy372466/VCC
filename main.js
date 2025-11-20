@@ -6,6 +6,7 @@ let hamburger_options = ['rotate','disappear']
 let [nav,mobile_nav] = [document.getElementById('nav'),document.getElementById('nav-mobile')]
 let nav_children = [...nav.children[0].children].map(x=>x.children[0]) // article elements
 let mobile_nav_children = [...mobile_nav.children[0].children].map(x=>x) // article elements
+let mobile_nav_children_original = [...mobile_nav.children] // mobile navigation [ array ] instance 
 let header = document.querySelector('header')
 let problemcontainer = document.getElementById('problem')
 const faqcontainer = document.querySelector('.faq-container')
