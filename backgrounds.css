@@ -61,7 +61,7 @@
   justify-content: center;
   position:relative;
   background-image:url('./media/concept/hands.png');
-  background-size:cover;
+  background-size:contain;
   height:100%;
   width:100%;
   background-repeat:no-repeat;

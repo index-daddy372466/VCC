@@ -543,7 +543,7 @@ background:none !important;
     background:var(--bg-column);
 }
 #services{
-    height: 100% !important;
+    height: 275vh !important;
     display:flex;
     flex-direction: column;
     background-color:var(--bg-services);
@@ -694,6 +694,12 @@ height: 75px;
     align-items: start;
     gap:1.25rem;
     justify-content: start;
+}
+.deal-icon{
+    float:right;
+    background:var(--col-secondary);
+    box-shadow: inset 0 0 5px .9px var(--bg-secondary);
+    border-radius: 2px;
 }
 .rates-list-item {
     list-style:circle !important;
@@ -868,7 +874,7 @@ h1 {
         margin-top:1.5rem;
     }
     .hands {
-        background-size:contain;
+        background-size:cover;
         background-position:unset;
         justify-content: start;
     }
@@ -915,6 +921,9 @@ h1 {
 }
 #counsel {
     transform:translate(0,13.5px) !important;
+}
+#services {
+    height:200vh !important
 }
     .target-link{
         /* color: var(--col-primary) !important; */
@@ -1180,9 +1189,6 @@ h1 {
         top:30%;
     }
     
-    #services{
-        min-height:100%;
-    }
     #certification{
     font-family: var(--font-header);
     letter-spacing: 1.15px;
@@ -1307,7 +1313,7 @@ h1 {
         font-size:11pt;
     }
     .hands {
-        background-size: cover;
+        background-size: contain;
         background-position: 0;
     }
     .alone {

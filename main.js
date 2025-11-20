@@ -12,6 +12,8 @@ let problemcontainer = document.getElementById('problem')
 const faqcontainer = document.querySelector('.faq-container')
 const faqtoggle = document.getElementById('faq-toggle')
 const learnmore = document.getElementById('learn-more')
+let faq_questions = document.querySelectorAll('.faq-item');
+
 
 // window event - scroll
 window.onscroll = handleScroll
@@ -117,13 +119,13 @@ hamburger.addEventListener('click',handleHamburgerMenu)
                     nav_element.classList.add('target-link')
                     mobile_nav_element.classList.add('target-link');
                 
-                    if(!nav_element.getAttribute('href')==='#home'){ 
-                        if(backgroundcounter >= 0) {
-                            backgroundcounter--
-                        }
-                        // document.querySelector('.scroll-top').scrollTo(0,0)
-                        handleFAQToggle(false)
-                        starting = 200
+                    if(!nav_element.getAttribute('href')==='#home'){
+                      if (backgroundcounter >= 0) {
+                        backgroundcounter--;
+                      }
+                      // document.querySelector('.scroll-top').scrollTo(0,0)
+                      // handleFAQToggle(false)
+                      starting = 200;
                     }
                 }
             }
@@ -185,23 +187,22 @@ hamburger.addEventListener('click',handleHamburgerMenu)
     // faq interation
 
     // toggle faq window
-    faqtoggle.onclick = handleFAQToggle
+    // faqtoggle.onclick = handleFAQToggle
 
-    let faq_questions = document.querySelectorAll('.faq-item');
-    for(let i = 0; i < faq_questions.length; i++) {
-        let toggle = [...faq_questions[i].children].find(x => x.classList.contains('toggle-icon'))||[...document.querySelectorAll('.toggle-icon')][i];
-        let faq_item = toggle.parentElement.parentElement;
-        // faq.onclick = e => {
-        faq_questions[i].children[0].onclick = e => {
-            faq_item.classList.toggle('active')
-        }
-    }
+    // for(let i = 0; i < faq_questions.length; i++) {
+    //     let toggle = [...faq_questions[i].children].find(x => x.classList.contains('toggle-icon'))||[...document.querySelectorAll('.toggle-icon')][i];
+    //     // let faq_item = toggle.parentElement.parentElement;
+    //     // faq.onclick = e => {
+    //     faq_questions[i].children[0].onclick = e => {
+    //         faq_item.classList.toggle('active')
+    //     }
+    // }
 
     // toggle faq window function
-    function handleFAQToggle(bool) {
-        bool==false ? faqcontainer.classList.add('faq-close') : faqcontainer.classList.toggle('faq-close')
-        return;
-    }
+    // function handleFAQToggle(bool) {
+    //     bool==false ? faqcontainer.classList.add('faq-close') : faqcontainer.classList.toggle('faq-close')
+    //     return;
+    // }
 
 
 
