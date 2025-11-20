@@ -543,7 +543,7 @@ background:none !important;
     background:var(--bg-column);
 }
 #services{
-    height: 275vh !important;
+    height: 100vh !important;
     display:flex;
     flex-direction: column;
     background-color:var(--bg-services);
@@ -922,9 +922,7 @@ h1 {
 #counsel {
     transform:translate(0,13.5px) !important;
 }
-#services {
-    height:200vh !important
-}
+
     .target-link{
         /* color: var(--col-primary) !important; */
         color: var(--col-subheader) !important;
@@ -1313,7 +1311,7 @@ h1 {
         font-size:11pt;
     }
     .hands {
-        background-size: contain;
+        background-size: cover;
         background-position: 0;
     }
     .alone {
