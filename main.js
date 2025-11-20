@@ -116,19 +116,15 @@ hamburger.addEventListener('click',handleHamburgerMenu)
                     nav_element.classList.add('target-link')
                     mobile_nav_element.classList.add('target-link');
                 
-                if(nav_element.getAttribute('href')==='#services'){ 
-              
-                }
-                else {
-                    if(backgroundcounter >= 0) {
-                        backgroundcounter--
+                    if(!nav_element.getAttribute('href')==='#home'){ 
+                        if(backgroundcounter >= 0) {
+                            backgroundcounter--
+                        }
+                        // document.querySelector('.scroll-top').scrollTo(0,0)
+                        handleFAQToggle(false)
+                        starting = 200
                     }
-                    // document.querySelector('.scroll-top').scrollTo(0,0)
-                    handleFAQToggle(false)
-                    starting = 200
                 }
-                }
-                
             }
         }
 

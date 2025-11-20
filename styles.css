@@ -1316,8 +1316,9 @@ h1 {
         top:78px !important;
     }
 
-    #home {
+    #problem {
         margin-top:6rem;
+        min-height:125vh !important;
     }
     header {
         min-height:70px !important;
