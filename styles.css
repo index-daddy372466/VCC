@@ -138,7 +138,7 @@ main{
     box-shadow: 0 -.25rem 12px .9px var(--bg-description);
 }
 #about {
-    height:100% !important;
+    min-height:115vh;
     overflow-y: scroll;
     padding-bottom:1.5rem;
 
@@ -859,6 +859,12 @@ h1 {
 /* --------------------------------------- media query --------------------------------------- */
 /* media query portrait mobile (width) */
 @media screen and (max-width:1010px) {
+    #about {
+    min-height:125vh;
+    overflow-y: scroll;
+    padding-bottom:1.5rem;
+
+}
     .alone,.faq-subheader{
         text-align: center;
         align-items: center;
@@ -1110,6 +1116,9 @@ h1 {
     .rates-col{
         text-align: center;
     }
+    #about {
+        min-height:100vh !important;
+    }
     
     #nav-mobile{
         top:80px;
@@ -1131,7 +1140,9 @@ h1 {
     #services > .section-subheader{
         display:block;
     }
-   
+   #services{
+    height: 200vh !important;
+    }
     .section-col>.description>p {
         text-align: left;
     }
@@ -1176,9 +1187,11 @@ h1 {
    
 }
 @media screen and (max-width: 565px) {
-    
+    #services{
+        height: 237vh !important;
+    }
     .section-col>.description>p {
-    font-size:12pt;
+        font-size:12pt;
     }   
     .faq-subheader{
         font-size: 18pt !important;
@@ -1245,6 +1258,9 @@ h1 {
 }
 @media screen and (max-width: 390px) {
 
+    #about {
+        min-height:115vh !important;
+    }
 .section-gen-link{
     scroll-margin-top: 80px !important;
 }
