@@ -154,7 +154,10 @@ main{
     overflow: hidden;
     display:inline;
 }
-
+#linked-in{
+    border-radius: 50%;
+    background:#000;
+}
 #about-me-para-actual, #contact-para{
     text-align: left;
     padding:.25rem;
