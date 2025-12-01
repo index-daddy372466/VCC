@@ -156,7 +156,12 @@ main{
 }
 #linked-in{
     border-radius: 50%;
-    background:#000;
+    background:transparent;
+}
+#linked-in:hover,
+#linked-in:active{
+    cursor:pointer;
+    transform:scale(.9)
 }
 #about-me-para-actual, #contact-para{
     text-align: left;
@@ -1215,7 +1220,7 @@ h1 {
     }
     .learn-more-config{
         right:unset;
-        bottom:245px;
+        bottom:100px;
         left:25%;
     }
     #home {
