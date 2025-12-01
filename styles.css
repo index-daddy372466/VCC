@@ -154,7 +154,15 @@ main{
     overflow: hidden;
     display:inline;
 }
-
+#linked-in{
+    border-radius: 50%;
+    background:transparent;
+}
+#linked-in:hover,
+#linked-in:active{
+    cursor:pointer;
+    transform:scale(.9)
+}
 #about-me-para-actual, #contact-para{
     text-align: left;
     padding:.25rem;
@@ -1225,7 +1233,7 @@ h1 {
     }
     .learn-more-config{
         right:unset;
-        bottom:245px;
+        bottom:100px;
         left:25%;
     }
     #home {
