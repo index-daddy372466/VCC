@@ -307,6 +307,12 @@ footer{
     border-top:.5px solid #000;
     /* background:#000; */
 }
+.footer-vc{
+    text-decoration: none;
+
+    color:var(--shade);
+}
+
 #coded-by-div,
 #rights-para{
     text-align: center;
