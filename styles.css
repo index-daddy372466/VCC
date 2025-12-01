@@ -301,7 +301,30 @@ header{
     left:0;
 }
 footer{
-    min-height:150px;
+    padding:.25rem 0;
+    width:100%;
+    border-top:.5px solid #000;
+    background:#000;
+}
+#coded-by-div,
+#rights-para{
+    color:#fff;
+    text-align: center;
+    font-size:11pt;
+    font-family:var(--font-header);
+    letter-spacing: 1px
+}
+#coded-by-div>a{
+    color:#0f0;
+}
+/* #rights-para{
+} */
+#coded-by-div{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:8px;
 }
 /* ---------------- learn more ---------------- */
 .learn-more {
