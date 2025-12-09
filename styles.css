@@ -230,6 +230,7 @@ main{
     align-items: center;
     justify-content: center;
     text-align: center;
+    min-height:100px;
 }
 .section-gen-link{
     transition:.5s;
@@ -580,7 +581,7 @@ background:none !important;
     background:var(--bg-column);
 }
 #services{
-    height: 100vh !important;
+    height: 150vh !important;
     display:flex;
     flex-direction: column;
     background-color:var(--bg-services);
@@ -888,6 +889,7 @@ h2 {
     margin-top:1rem;
     border-bottom: .5px solid #000;;
     margin-bottom:1rem;
+    text-align: left;
 }
 .rates-special{
     float:right;
@@ -967,6 +969,7 @@ h2 {
 }
 
 #problem {
+    height:100vh !important;
     display:grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -1201,7 +1204,7 @@ h2 {
         display:block;
     }
    #services{
-    height: 200vh !important;
+    height: 100% !important;
     }
     .section-col>.description>p {
         text-align: left;
@@ -1248,7 +1251,7 @@ h2 {
 }
 @media screen and (max-width: 565px) {
     #services{
-        height: 237vh !important;
+        height: 140vh !important;
     }
     .section-col>.description>p {
         font-size:12pt;
@@ -1271,6 +1274,7 @@ h2 {
     left:5px;
     }
     #problem{
+        height:150vh !important;
         display:Flex;
         flex-direction: column;
         align-items: center;
@@ -1339,6 +1343,9 @@ h2 {
     #img-cert {
         transform:translate(-130%,100%);
         width:110px;
+    }
+    #services{
+        height:180vh !important;
     }
     #contact{
         height:185vh !important;
