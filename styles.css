@@ -181,6 +181,8 @@ main{
     justify-content: start;
     width:100%;
     gap:2rem;
+    
+    height:170vh;
 }
 .contact-list-item{
     text-align: center;
@@ -234,7 +236,8 @@ main{
 }
 .section-gen-link{
     transition:.5s;
-    height:100vh !important;
+    /* height:100vh !important; */
+    height:100vh;
     width:100%;
     overflow: hidden;
     position:relative;
@@ -310,7 +313,6 @@ footer{
 }
 .footer-vc{
     text-decoration: none;
-
     color:var(--shade);
 }
 
@@ -760,6 +762,23 @@ height: 80px;
     background-color:var(--bg-tint);
     color:var(--col-subheader);
 }
+.glossy-container {
+  /* Semi-transparent background layer */
+  background: rgba(255, 255, 255, 0.15); 
+  
+  /* The magic: blurs whatever is behind the container */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
+  
+  /* High-fidelity border mimicking light reflecting off edges */
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  
+  /* Outer depth shadow + Inset shadow for top edge shine */
+  box-shadow: 
+    0 8px 32px 0 rgba(0, 0, 0, 0.15),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.3);
+}
 #faq-toggle{
     border-top:none !important;
     z-index: 999;
@@ -909,7 +928,7 @@ h2 {
 .rates-list-container > li > h3{
     font-size:18pt;
 }
-.bold-text{
+.bold-text,.day{
     font-weight:bold
 }
 .rates-col>h3{
@@ -917,7 +936,34 @@ h2 {
 }
 /* --------------------------------------- faq area --------------------------------------- */
 
+/* office hours */
+#hours-container {
+    border-bottom:2px solid #000;
+    border-bottom-width: 8px;
+    width:100%;
+    overflow-y:scroll;
+    overflow-x:none;
+    overflow: none;
 
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+
+    padding:8px;
+
+}
+.hours-li {
+    width:200px;
+    display:flex;
+    
+    align-items: center;
+    justify-content: space-between;
+
+}
+.hours-li > p {
+    font-family:var(--font-secondary);
+}
 /* --------------------------------------- media query --------------------------------------- */
 /* media query portrait mobile (width) */
 @media screen and (max-width:1010px) {
@@ -1136,7 +1182,7 @@ h2 {
     .cta-mail>img,.cta-phone>img{
         height:77px
     }
-
+    
     #img-pro{
     transition:.5s;
     height:225px;
@@ -1348,7 +1394,7 @@ h2 {
         height:180vh !important;
     }
     #contact{
-        height:185vh !important;
+        height:275vh !important;
     }
     #img-pro{
         transition:.5s;
